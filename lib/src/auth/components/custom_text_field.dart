@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final IconData icon;
   final String label;
+  final bool isobscure;
 
   const CustomTextField({
     super.key,
     required this.icon,
     required this.label,
+    required this.isobscure,
   });
 
   @override
@@ -15,7 +17,7 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
-        obscureText: true,
+        obscureText: isobscure,
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           labelText: label,

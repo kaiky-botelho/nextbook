@@ -30,12 +30,14 @@ class SignInScreen extends StatelessWidget {
                     //Email
                     CustomTextField(
                       icon: Icons.email,
-                      label: "Email"
+                      label: "Email",
+                      isobscure: false,
                     ),
                     //Senha
                     CustomTextField(
                       icon: Icons.lock,
                       label: "senha",
+                      isobscure: true,
                     ),
                   ],
                 )),
