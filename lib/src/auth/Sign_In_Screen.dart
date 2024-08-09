@@ -15,10 +15,10 @@ class SignInScreen extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 40,
-              ),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                  vertical: 40,
+                ),
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
@@ -26,17 +26,26 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     //Email
-                    CustomTextField(
+                    const CustomTextField(
                       icon: Icons.email,
                       label: "Email",
                     ),
                     //Senha
-                    CustomTextField(
+                    const CustomTextField(
                       icon: Icons.lock,
                       label: "senha",
                       isSecret: true,
+                    ),
+
+                    SizedBox(
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text('Entrar', style: TextStyle(fontSize: 20),),
+                      ),
                     ),
                   ],
                 )),
