@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:nextbook/src/auth/components/custom_text_field.dart';
 
@@ -11,8 +12,39 @@ class SignInScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Container(color: Color.fromRGBO(178, 203, 207, 1)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // Imagem do App
+                Image.asset(
+                  'lib/imagens/logo.png', // Substitua pelo nome correto da imagem
+                  height: 100, // Altere o tamanho conforme necessário
+                ),
+                // Categoria
+                SizedBox(
+                  height: 30,
+                  child: DefaultTextStyle(
+                    style: const TextStyle(
+                      fontSize: 23,
+                      color: Colors.white,
+                    ),
+                    child: AnimatedTextKit(
+                      pause: Duration.zero,
+                      repeatForever: true,
+                      animatedTexts: [
+                        FadeAnimatedText('Venda de livros'),
+                        FadeAnimatedText('Livros Usados'),
+                        FadeAnimatedText('Livros Novos'),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
+
+          // Formulário
+
           Expanded(
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -41,15 +73,16 @@ class SignInScreen extends StatelessWidget {
                     isSecret: true,
                   ),
 
-                  //Botão de entrar
+                  // Botão de entrar
                   SizedBox(
                     height: 50,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18)),
-                        backgroundColor: Color(0xFFF67F7D),
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        backgroundColor: const Color(0xFFF67F7D),
                         foregroundColor: Colors.white,
                       ),
                       child: const Text(
@@ -59,7 +92,7 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
 
-                  //Esqueceu a senha
+                  // Esqueceu a senha
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
@@ -71,7 +104,7 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
 
-                  //Divisor
+                  // Divisor
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
                     child: Row(
@@ -96,22 +129,24 @@ class SignInScreen extends StatelessWidget {
                     ),
                   ),
 
-                  //Botão de Novo Usuario
+                  // Botão de Novo Usuario
                   SizedBox(
                     height: 50,
                     child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18)
+                          borderRadius: BorderRadius.circular(18),
                         ),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           color: Color(0xFFF67F7D),
-                          
-                        )
+                        ),
                       ),
                       onPressed: () {},
-                      child: const Text("Criar conta", style: TextStyle(color: Colors.black, fontSize: 20), ),
+                      child: const Text(
+                        "Criar conta",
+                        style: TextStyle(color: Colors.black, fontSize: 20),
+                      ),
                     ),
                   ),
                 ],
