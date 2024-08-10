@@ -10,47 +10,47 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.FundoNext,
-      body: Column(
-        children: [
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // Imagem do App
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Image.asset(
-                    'lib/imagens/logo.png', // Substitua pelo nome correto da imagem
-                    height: 100, // Altere o tamanho conforme necessário
-                  ),
-                ),
-                // Categoria
-                SizedBox(
-                  height: 30,
-                  child: DefaultTextStyle(
-                    style: const TextStyle(
-                      fontSize: 23,
-                      color: Colors.white,
-                    ),
-                    child: AnimatedTextKit(
-                      pause: Duration.zero,
-                      repeatForever: true,
-                      animatedTexts: [
-                        FadeAnimatedText('Venda de livros'),
-                        FadeAnimatedText('Livros Usados'),
-                        FadeAnimatedText('Livros Novos'),
-                      ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Imagem do App
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                    child: Image.asset(
+                      'lib/imagens/logo.png', // Substitua pelo nome correto da imagem
+                      height: 100, // Altere o tamanho conforme necessário
                     ),
                   ),
-                )
-              ],
+                  // Categoria
+                  SizedBox(
+                    height: 30,
+                    child: DefaultTextStyle(
+                      style: const TextStyle(
+                        fontSize: 23,
+                        color: Colors.white,
+                      ),
+                      child: AnimatedTextKit(
+                        pause: Duration.zero,
+                        repeatForever: true,
+                        animatedTexts: [
+                          FadeAnimatedText('Venda de livros'),
+                          FadeAnimatedText('Livros Usados'),
+                          FadeAnimatedText('Livros Novos'),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-
-          // Formulário
-
-          Expanded(
-            child: Container(
+        
+            // Formulário
+        
+            Container(
               padding: const EdgeInsets.symmetric(
                 horizontal: 32,
                 vertical: 40,
@@ -69,14 +69,14 @@ class SignInScreen extends StatelessWidget {
                     icon: Icons.email,
                     label: "Email",
                   ),
-
+            
                   // Senha
                   const CustomTextField(
                     icon: Icons.lock,
                     label: "senha",
                     isSecret: true,
                   ),
-
+            
                   // Botão de entrar
                   SizedBox(
                     height: 50,
@@ -95,7 +95,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-
+            
                   // Esqueceu a senha
                   Align(
                     alignment: Alignment.centerRight,
@@ -107,7 +107,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-
+            
                   // Divisor
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
@@ -132,7 +132,7 @@ class SignInScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-
+            
                   // Botão de Novo Usuario
                   SizedBox(
                     height: 50,
@@ -156,8 +156,8 @@ class SignInScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
