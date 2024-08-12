@@ -17,11 +17,10 @@ class ItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-
         //Conteudo
         GestureDetector(
-          onTap: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (c){
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (c) {
               return ProductSreen(item: item);
             }));
           },
@@ -37,7 +36,12 @@ class ItemTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   // imagem
-                  Expanded(child: Image.asset(item.imgUrl)),
+                  Expanded(
+                    child: Hero(
+                      tag: item.imgUrl,
+                      child: Image.asset(item.imgUrl),
+                    ),
+                  ),
                   // Nome
                   Text(
                     item.itemName,
@@ -55,7 +59,7 @@ class ItemTile extends StatelessWidget {
                       color: CustomColors.vermelhoNext,
                     ),
                   ),
-          
+
                   // Condição
                   Text(
                     'Estado: ${item.condition}',
@@ -74,7 +78,7 @@ class ItemTile extends StatelessWidget {
             top: 4,
             right: 4,
             child: GestureDetector(
-              onTap: (){},
+              onTap: () {},
               child: Container(
                 height: 40,
                 width: 35,
