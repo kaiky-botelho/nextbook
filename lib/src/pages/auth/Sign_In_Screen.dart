@@ -1,9 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:nextbook/src/auth/components/custom_text_field.dart';
-import 'package:nextbook/src/auth/sign_up_screen.dart';
-import 'package:nextbook/src/base/base_screen.dart';
+
 import 'package:nextbook/src/config/custom_colors.dart';
+import 'package:nextbook/src/pages/auth/components/custom_text_field.dart';
+import 'package:nextbook/src/pages/auth/sign_up_screen.dart';
+import 'package:nextbook/src/pages/base/base_screen.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -14,7 +15,7 @@ class SignInScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: CustomColors.FundoNext,
+      backgroundColor: CustomColors.fundoNext,
       body: SingleChildScrollView(
         child: SizedBox(
           height: size.height,
@@ -99,7 +100,7 @@ class SignInScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
-                          backgroundColor: CustomColors.VermelhoNext,
+                          backgroundColor: CustomColors.vermelhoNext,
                           foregroundColor: Colors.white,
                         ),
                         child: const Text(
@@ -116,7 +117,7 @@ class SignInScreen extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           'Esqueceu a Senha?',
-                          style: TextStyle(color: CustomColors.VermelhoNext),
+                          style: TextStyle(color: CustomColors.vermelhoNext),
                         ),
                       ),
                     ),
@@ -156,7 +157,7 @@ class SignInScreen extends StatelessWidget {
                           ),
                           side:  BorderSide(
                             width: 2,
-                            color: CustomColors.VermelhoNext,
+                            color: CustomColors.vermelhoNext,
                           ),
                         ),
                         onPressed: () {
@@ -168,7 +169,7 @@ class SignInScreen extends StatelessWidget {
                         },
                         child:  Text(
                           "Criar conta",
-                          style: TextStyle(color: CustomColors.VermelhoNext, fontSize: 20),
+                          style: TextStyle(color: CustomColors.vermelhoNext, fontSize: 20),
                         ),
                       ),
                     ),

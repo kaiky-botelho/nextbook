@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
-import 'package:nextbook/src/home/home_tab.dart';
+import 'package:nextbook/src/pages/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -42,7 +42,7 @@ class _BaseScreenState extends State<BaseScreen> {
         },
         type: BottomNavigationBarType.fixed,
         backgroundColor: Color.fromARGB(255, 178, 203, 207),
-        selectedItemColor: CustomColors.VermelhoNext,
+        selectedItemColor: CustomColors.vermelhoNext,
         unselectedItemColor: Colors.white.withAlpha(250),
         items: const [
           BottomNavigationBarItem(

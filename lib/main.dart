@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nextbook/src/auth/sign_in_screen.dart';
+import 'package:nextbook/src/pages/auth/Sign_In_Screen.dart';
 
 void main() {
   runApp(const MyApp());

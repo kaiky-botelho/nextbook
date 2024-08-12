@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:nextbook/src/auth/components/custom_text_field.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
+import 'package:nextbook/src/pages/auth/components/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({super.key});
@@ -21,7 +21,7 @@ class SignUpScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: CustomColors.FundoNext,
+      backgroundColor: CustomColors.fundoNext,
       body: SingleChildScrollView(
         child: SizedBox(
           height: size.height,
@@ -81,7 +81,7 @@ class SignUpScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18),
                               ),
-                              backgroundColor: CustomColors.VermelhoNext,
+                              backgroundColor: CustomColors.vermelhoNext,
                               foregroundColor: Colors.white,
                             ),
                             child: const Text(
