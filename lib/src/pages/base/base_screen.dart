@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
+import 'package:nextbook/src/pages/cart/cart_tab.dart';
 import 'package:nextbook/src/pages/home/home_tab.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -21,9 +22,7 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         children: [
           HomeTab(),
-          Container(
-            color: Colors.yellow,
-          ),
+          CartTab(),
           Container(
             color: Colors.green[100],
           ),
