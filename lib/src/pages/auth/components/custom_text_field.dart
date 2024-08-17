@@ -6,13 +6,15 @@ class CustomTextField extends StatefulWidget {
   final String label;
   final bool isSecret;
   final List<TextInputFormatter>? inputFormatters;
+  final TextEditingController? controller; // Adicionado o controlador
 
   const CustomTextField({
     super.key,
     required this.icon,
     required this.label,
     this.isSecret = false,
-    this.inputFormatters
+    this.inputFormatters,
+    this.controller, // Recebe o controlador
   });
 
   @override
@@ -20,12 +22,12 @@ class CustomTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<CustomTextField> {
-  bool isobscure = false;
+  bool isObscure = false;
 
   @override
   void initState() {
     super.initState();
-    isobscure = widget.isSecret;
+    isObscure = widget.isSecret;
   }
 
   @override
@@ -33,15 +35,22 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: TextFormField(
+        controller: widget.controller, // Conecta o controlador ao TextFormField
         inputFormatters: widget.inputFormatters,
-        obscureText: isobscure,
+        obscureText: isObscure,
         decoration: InputDecoration(
           prefixIcon: Icon(widget.icon),
-          suffixIcon: widget.isSecret ? IconButton(onPressed: (){
-            setState(() {
-              isobscure = !isobscure;
-            });
-          }, icon: Icon(isobscure ? Icons.visibility : Icons.visibility_off)) : null,
+          suffixIcon: widget.isSecret
+              ? IconButton(
+                  onPressed: () {
+                    setState(() {
+                      isObscure = !isObscure;
+                    });
+                  },
+                  icon: Icon(
+                      isObscure ? Icons.visibility : Icons.visibility_off),
+                )
+              : null,
           labelText: widget.label,
           isDense: true,
           border: OutlineInputBorder(
