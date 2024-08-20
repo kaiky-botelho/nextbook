@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
-import 'package:nextbook/src/pages/auth/components/custom_text_field.dart';
+import 'package:nextbook/src/pages/common_widgets/custom_text_field.dart';
 
 class SignUpScreen extends StatelessWidget {
   SignUpScreen({super.key});

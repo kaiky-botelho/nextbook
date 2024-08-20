@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
 import 'package:nextbook/src/pages/cart/cart_tab.dart';
 import 'package:nextbook/src/pages/home/home_tab.dart';
+import 'package:nextbook/src/pages/profile/profile_tab.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
@@ -21,14 +22,12 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
         children: [
-          HomeTab(),
-          CartTab(),
+          const HomeTab(),
+          const CartTab(),
           Container(
             color: Colors.green[100],
           ),
-          Container(
-            color: Colors.purple[200],
-          ),
+          const ProfileTab(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
