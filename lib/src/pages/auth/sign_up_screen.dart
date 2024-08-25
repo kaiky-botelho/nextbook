@@ -2,9 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
 import 'package:nextbook/src/pages/common_widgets/custom_text_field.dart';
+import 'package:nextbook/src/database/db.dart'; // Importar a classe DB
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
   SignUpScreen({super.key});
+
+  @override
+  _SignUpScreenState createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
+  // Controladores de texto
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
+  final TextEditingController _nomeController = TextEditingController();
+  final TextEditingController _celularController = TextEditingController();
+  final TextEditingController _cpfController = TextEditingController();
 
   final cpfFormatter = MaskTextInputFormatter(
     mask: '###.###.###-##',
@@ -15,6 +28,47 @@ class SignUpScreen extends StatelessWidget {
     mask: '## # ####-####',
     filter: {'#': RegExp(r'[0-9]')},
   );
+
+  Future<void> _signUp() async {
+    final email = _emailController.text;
+    final senha = _senhaController.text;
+    final nome = _nomeController.text;
+    final celular = _celularController.text;
+    final cpf = _cpfController.text;
+
+    if (email.isEmpty || senha.isEmpty || nome.isEmpty || celular.isEmpty || cpf.isEmpty) {
+      // Mostrar um alerta se algum campo estiver vazio
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Erro'),
+          content: const Text('Por favor, preencha todos os campos.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Ok'),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
+    // Inserir os dados do usuário no banco de dados
+    final db = await DB.instance.database;
+    await db!.insert('usuario', {
+      'email': email,
+      'senha': senha,
+      'nome': nome,
+      'cpf': cpf,
+      'celular': celular,
+    });
+
+    // Navegar para a tela de login após o cadastro
+    Navigator.of(context).pop();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +96,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ),
 
-                  //Formulario
+                  // Formulário
                   Container(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 32, vertical: 40),
@@ -54,29 +108,38 @@ class SignUpScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const CustomTextField(
-                            icon: Icons.email, label: 'Email'),
-                        const CustomTextField(
+                        CustomTextField(
+                          icon: Icons.email,
+                          label: 'Email',
+                          controller: _emailController, // Conectar o controller
+                        ),
+                        CustomTextField(
                           icon: Icons.lock,
                           label: 'Senha',
                           isSecret: true,
+                          controller: _senhaController, // Conectar o controller
                         ),
-                        const CustomTextField(
-                            icon: Icons.person, label: 'Nome'),
+                        CustomTextField(
+                          icon: Icons.person,
+                          label: 'Nome',
+                          controller: _nomeController, // Conectar o controller
+                        ),
                         CustomTextField(
                           icon: Icons.phone,
                           label: 'Celular',
                           inputFormatters: [phoneFormatter],
+                          controller: _celularController, // Conectar o controller
                         ),
                         CustomTextField(
                           icon: Icons.file_copy,
                           label: 'CPF',
                           inputFormatters: [cpfFormatter],
+                          controller: _cpfController, // Conectar o controller
                         ),
                         SizedBox(
                           height: 50,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: _signUp, // Chamar o método de cadastro
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18),

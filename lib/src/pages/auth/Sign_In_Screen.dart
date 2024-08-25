@@ -1,17 +1,55 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
-import 'package:nextbook/src/pages/common_widgets/custom_text_field.dart';
 import 'package:nextbook/src/pages/auth/sign_up_screen.dart';
 import 'package:nextbook/src/pages/base/base_screen.dart';
+import 'package:nextbook/src/pages/common_widgets/custom_text_field.dart';
+import 'package:nextbook/src/database/db.dart'; // Importa a classe DB
 
-class SignInScreen extends StatelessWidget {
+class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  _SignInScreenState createState() => _SignInScreenState();
+}
 
+class _SignInScreenState extends State<SignInScreen> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _senhaController = TextEditingController();
+
+  Future<void> _signIn() async {
+    final email = _emailController.text;
+    final senha = _senhaController.text;
+
+    // Verifica se as credenciais são válidas
+    final usuario = await DB.instance.signIn(email, senha);
+
+    if (usuario != null) {
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (c) {
+        return const BaseScreen();
+      }));
+    } else {
+      // Exibe um alerta se o login falhar
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Erro'),
+          content: const Text('Email ou senha incorretos.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Ok'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -30,8 +68,8 @@ class SignInScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Image.asset(
-                        'lib/imagens/logo.png', 
-                        height: 100, 
+                        'lib/imagens/logo.png',
+                        height: 100,
                       ),
                     ),
                     // Categoria
@@ -56,9 +94,8 @@ class SignInScreen extends StatelessWidget {
                   ],
                 ),
               ),
-          
+
               // Formulário
-          
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 32,
@@ -74,28 +111,25 @@ class SignInScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     // Email
-                    const CustomTextField(
+                    CustomTextField(
                       icon: Icons.email,
                       label: "Email",
+                      controller: _emailController, // Conecta o controller
                     ),
-              
+
                     // Senha
-                    const CustomTextField(
+                    CustomTextField(
                       icon: Icons.lock,
-                      label: "senha",
+                      label: "Senha",
                       isSecret: true,
+                      controller: _senhaController, // Conecta o controller
                     ),
-              
+
                     // Botão de entrar
                     SizedBox(
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: (
-                        ) {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (c){
-                            return const BaseScreen();
-                          }));
-                        },
+                        onPressed: _signIn, // Chama o método de login
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
@@ -109,7 +143,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-              
+
                     // Esqueceu a senha
                     Align(
                       alignment: Alignment.centerRight,
@@ -121,7 +155,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-              
+
                     // Divisor
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),
@@ -146,7 +180,7 @@ class SignInScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-              
+
                     // Botão de Novo Usuario
                     SizedBox(
                       height: 50,
@@ -155,21 +189,22 @@ class SignInScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
                           ),
-                          side:  BorderSide(
+                          side: BorderSide(
                             width: 2,
                             color: CustomColors.vermelhoNext,
                           ),
                         ),
                         onPressed: () {
                           Navigator.of(context).push(
-                            MaterialPageRoute(builder: (c){
+                            MaterialPageRoute(builder: (c) {
                               return SignUpScreen();
                             }),
                           );
                         },
-                        child:  Text(
+                        child: Text(
                           "Criar conta",
-                          style: TextStyle(color: CustomColors.vermelhoNext, fontSize: 20),
+                          style: TextStyle(
+                              color: CustomColors.vermelhoNext, fontSize: 20),
                         ),
                       ),
                     ),
