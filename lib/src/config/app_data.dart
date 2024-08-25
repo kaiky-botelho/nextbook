@@ -1,7 +1,6 @@
 import 'package:nextbook/src/models/cart_item_model.dart';
 import 'package:nextbook/src/models/item_model.dart';
 import 'package:nextbook/src/models/order_model.dart';
-import 'package:nextbook/src/models/user_model.dart';
 
 ItemModel hipotese = ItemModel(
   itemName: 'A hipótese do amor',
@@ -107,12 +106,6 @@ List<CartItemModel> cartItems = [
   CartItemModel(item: amorGelo, quantity: 1),
 ];
 
-UserModel user = UserModel(
-    phone: '16 9 94223725',
-    cpf: '455.759.728.95',
-    email: 'kaii.botelho18@gmail.com',
-    name: 'Kaiky Botelho',
-    password: '');
 
 List<OrderModel> orders = [
   OrderModel(

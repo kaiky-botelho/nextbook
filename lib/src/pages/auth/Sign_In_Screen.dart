@@ -25,9 +25,9 @@ class _SignInScreenState extends State<SignInScreen> {
     final usuario = await DB.instance.signIn(email, senha);
 
     if (usuario != null) {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (c) {
-        return const BaseScreen();
-      }));
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => const BaseScreen()),
+      );
     } else {
       // Exibe um alerta se o login falhar
       showDialog(
@@ -35,6 +35,65 @@ class _SignInScreenState extends State<SignInScreen> {
         builder: (context) => AlertDialog(
           title: const Text('Erro'),
           content: const Text('Email ou senha incorretos.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Ok'),
+            ),
+          ],
+        ),
+      );
+    }
+  }
+
+  Future<void> _forgotPassword() async {
+    final email = _emailController.text;
+
+    if (email.isEmpty) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Erro'),
+          content: const Text('Por favor, insira seu email.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Ok'),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
+    final success = await DB.instance.sendPasswordResetEmail(email);
+
+    if (success) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Sucesso'),
+          content: const Text('Instruções para recuperação de senha foram enviadas para seu email.'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Ok'),
+            ),
+          ],
+        ),
+      );
+    } else {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Erro'),
+          content: const Text('Não foi possível enviar o email de recuperação.'),
           actions: [
             TextButton(
               onPressed: () {
@@ -90,11 +149,10 @@ class _SignInScreenState extends State<SignInScreen> {
                           ],
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
-
               // Formulário
               Container(
                 padding: const EdgeInsets.symmetric(
@@ -114,22 +172,20 @@ class _SignInScreenState extends State<SignInScreen> {
                     CustomTextField(
                       icon: Icons.email,
                       label: "Email",
-                      controller: _emailController, // Conecta o controller
+                      controller: _emailController,
                     ),
-
                     // Senha
                     CustomTextField(
                       icon: Icons.lock,
                       label: "Senha",
                       isSecret: true,
-                      controller: _senhaController, // Conecta o controller
+                      controller: _senhaController,
                     ),
-
                     // Botão de entrar
                     SizedBox(
                       height: 50,
                       child: ElevatedButton(
-                        onPressed: _signIn, // Chama o método de login
+                        onPressed: _signIn,
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18),
@@ -143,19 +199,17 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
                     ),
-
                     // Esqueceu a senha
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: _forgotPassword,
                         child: Text(
                           'Esqueceu a Senha?',
                           style: TextStyle(color: CustomColors.vermelhoNext),
                         ),
                       ),
                     ),
-
                     // Divisor
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),
@@ -180,7 +234,6 @@ class _SignInScreenState extends State<SignInScreen> {
                         ],
                       ),
                     ),
-
                     // Botão de Novo Usuario
                     SizedBox(
                       height: 50,
@@ -196,15 +249,15 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                         onPressed: () {
                           Navigator.of(context).push(
-                            MaterialPageRoute(builder: (c) {
-                              return SignUpScreen();
-                            }),
+                            MaterialPageRoute(builder: (context) => SignUpScreen()),
                           );
                         },
                         child: Text(
                           "Criar conta",
                           style: TextStyle(
-                              color: CustomColors.vermelhoNext, fontSize: 20),
+                            color: CustomColors.vermelhoNext,
+                            fontSize: 20,
+                          ),
                         ),
                       ),
                     ),

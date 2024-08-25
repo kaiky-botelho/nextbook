@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nextbook/src/config/custom_colors.dart';
 import 'package:nextbook/src/pages/common_widgets/custom_text_field.dart';
-import 'package:nextbook/src/config/app_data.dart' as appData;
+import 'package:nextbook/src/database/db.dart'; // Importa a classe DB
 
 class ProfileTab extends StatefulWidget {
   const ProfileTab({super.key});
@@ -11,6 +11,138 @@ class ProfileTab extends StatefulWidget {
 }
 
 class _ProfileTabState extends State<ProfileTab> {
+  // Variáveis para armazenar os dados do usuário
+  String? _email;
+  String? _name;
+  String? _phone;
+  String? _cpf;
+
+  // Controladores para o diálogo de atualização de senha
+  final TextEditingController _currentPasswordController = TextEditingController();
+  final TextEditingController _newPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserData();
+  }
+
+  // Carregar os dados do usuário do banco de dados
+  Future<void> _loadUserData() async {
+    final user = await DB.instance.getUser();
+
+    if (user != null) {
+      setState(() {
+        _email = user['email'];
+        _name = user['nome'];
+        _phone = user['celular'];
+        _cpf = user['cpf'];
+      });
+    }
+  }
+
+  // Atualizar a senha
+  Future<void> _updatePassword() async {
+    final result = await showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Título
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Atualização de senha",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: CustomColors.vermelhoNext,
+                    ),
+                  ),
+                ),
+                // Senha Atual
+                CustomTextField(
+                  isSecret: true,
+                  icon: Icons.lock,
+                  label: 'Senha Atual',
+                  controller: _currentPasswordController,
+                ),
+                // Nova Senha
+                CustomTextField(
+                  isSecret: true,
+                  icon: Icons.lock_outline_rounded,
+                  label: 'Nova Senha',
+                  controller: _newPasswordController,
+                ),
+                // Confirmar Nova Senha
+                CustomTextField(
+                  isSecret: true,
+                  icon: Icons.lock_outline_rounded,
+                  label: 'Confirmar Nova Senha',
+                  controller: _confirmPasswordController,
+                ),
+                // Botão de Confirmação
+                SizedBox(
+                  height: 45,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: CustomColors.vermelhoNext,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    onPressed: () async {
+                      Navigator.of(context).pop(true);
+                    },
+                    child: const Text(
+                      'Atualizar',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      }
+    );
+
+    if (result == true) {
+      final currentPassword = _currentPasswordController.text;
+      final newPassword = _newPasswordController.text;
+      final confirmPassword = _confirmPasswordController.text;
+
+      if (newPassword == confirmPassword) {
+        final success = await DB.instance.updatePassword(
+          currentPassword: currentPassword,
+          newPassword: newPassword,
+        );
+
+        if (success) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Senha atualizada com sucesso')),
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Falha ao atualizar a senha')),
+          );
+        }
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('As senhas não coincidem')),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +151,7 @@ class _ProfileTabState extends State<ProfileTab> {
         elevation: 0,
         title: const Text(
           'Perfil do usuário',
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: TextStyle(color: Colors.white),
         ),
         actions: [
           IconButton(
@@ -36,36 +166,36 @@ class _ProfileTabState extends State<ProfileTab> {
           physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.fromLTRB(16, 32, 16, 16),
           children: [
-            //email
+            // Email
             CustomTextField(
               readOnly: true,
-              initialValue: appData.user.email,
+              initialValue: _email,
               icon: Icons.email,
               label: 'Email',
             ),
-            //nome
+            // Nome
             CustomTextField(
               readOnly: true,
-              initialValue: appData.user.name,
+              initialValue: _name,
               icon: Icons.person,
               label: 'Nome',
             ),
-            //celular
+            // Celular
             CustomTextField(
               readOnly: true,
-              initialValue: appData.user.phone,
+              initialValue: _phone,
               icon: Icons.phone,
               label: 'Celular',
             ),
-            //cpf
+            // CPF
             CustomTextField(
               readOnly: true,
-              initialValue: appData.user.cpf,
+              initialValue: _cpf,
               icon: Icons.file_copy,
               label: 'CPF',
               isSecret: true,
             ),
-            //Botão de atualização de senha
+            // Botão de atualização de senha
             SizedBox(
               height: 50,
               child: OutlinedButton(
@@ -78,9 +208,7 @@ class _ProfileTabState extends State<ProfileTab> {
                     color: CustomColors.vermelhoNext,
                   ),
                 ),
-                onPressed: () {
-                  updatePassword();
-                },
+                onPressed: _updatePassword,
                 child: Text(
                   "Atualizar Senha",
                   style: TextStyle(
@@ -93,87 +221,6 @@ class _ProfileTabState extends State<ProfileTab> {
           ],
         ),
       ),
-    );
-  }
-
-  Future<bool?> updatePassword() {
-    return showDialog(
-      context: context,
-      builder: (context) {
-        return Dialog(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          child: Stack(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    //Titulo
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        "Atualização de senha",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: CustomColors.vermelhoNext),
-                      ),
-                    ),
-                    //Senha Atual
-                    const CustomTextField(
-                        isSecret: true, icon: Icons.lock, label: 'Senha Atual'),
-                    //Nova senha
-                    const CustomTextField(
-                        isSecret: true,
-                        icon: Icons.lock_outline_rounded,
-                        label: 'Nova Senha'),
-
-                    //Confirmacao senha
-
-                    const CustomTextField(
-                        isSecret: true,
-                        icon: Icons.lock_outline_rounded,
-                        label: 'Confirmar Nova Senha'),
-
-                    //Botão de confirmação
-                    SizedBox(
-                      height: 45,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: CustomColors
-                              .vermelhoNext, // Definindo o vermelhoNext como fundo
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: const Text(
-                          'Atualizar',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                child: IconButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  }, 
-                  icon: Icon(Icons.close),
-                ),
-              ),
-            ],
-          ),
-        );
-      },
     );
   }
 }
