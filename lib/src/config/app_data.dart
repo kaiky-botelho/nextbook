@@ -456,15 +456,48 @@ ItemModel stanLee = ItemModel(
   category: 'Biografia',
 );
 
-ItemModel barackOba = ItemModel(
+ItemModel barackOba = ItemMode(
   itemName: 'Uma terra prometida',
   imgUrl: 'assets/livros/barack.jpg',
   price: 10.90,
   unit:'und',
   condition: 'Usado',
   description: '''No comovente e aguardado primeiro volume de suas memórias presidenciais, Barack Obama narra, nas próprias palavras, a história de sua odisseia improvável, desde quando era um jovem em busca de sua identidade até se tornar líder da maior democracia do mundo. Com detalhes surpreendentes, ele descreve sua formação política e os momentos marcantes do primeiro mandato de sua presidência histórica ― época de turbulências e transformações drásticas.''',
-  category: 'Biografia',
-);
+  category: 'Biografia',);
+
+  //Suspense
+
+temModel oHomemGiz = ItemMode(
+  itemName: 'Uma terra prometida',
+  imgUrl: 'assets/livros/homemGiz.jpg',
+  price: 17.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Em 1986, Eddie e os amigos passam a maior parte dos dias andando de bicicleta pela pacata vizinhança em busca de aventuras. Os desenhos a giz são seu código secreto: homenzinhos rabiscados no asfalto; mensagens que só eles entendem. Mas um desenho misterioso leva o grupo de crianças até um corpo desmembrado e espalhado em um bosque. Depois disso, nada mais é como antes. Em 2016, Eddie se esforça para superar o passado, até que um dia ele e os amigos de infância recebem um mesmo aviso: o desenho de um homem de giz enforcado. Quando um dos amigos aparece morto, Eddie tem certeza de que precisa descobrir o que de fato aconteceu trinta anos atrás. Alternando habilidosamente entre presente e passado, O Homem de Giz traz o melhor do suspense: personagens maravilhosamente construídos, mistérios de prender o fôlego e reviravoltas que vão impressionar até os leitores mais escaldados.''',
+  category: 'Suspense',
+  );
+
+temModel outsider = ItemMode(
+  itemName: 'Outsider ',
+  imgUrl: 'assets/livros/outsider.jpg',
+  price: 26.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''O corpo de um menino de onze anos é encontrado abandonado no parque de Flint City, brutalmente assassinado. Testemunhas e impressões digitais apontam o criminoso como uma das figuras mais conhecidas da cidade ― Terry Maitland, treinador da Liga Infantil de beisebol, professor de inglês, casado e pai de duas filhas. O detetive Ralph Anderson não hesita em ordenar uma prisão rápida e bastante pública, fazendo com que em pouco tempo toda a cidade saiba que o Treinador T é o principal suspeito do crime. Maitland tem um álibi, mas Anderson e o promotor público logo têm amostras de DNA para corroborar a acusação. O caso parece resolvido. Mas conforme a investigação se desenrola, a história se transforma em uma montanha-russa, cheia de tensão e suspense. Terry Maitland parece ser uma boa pessoa, mas será que isso não passa de uma máscara? A aterrorizante resposta é o que faz desta uma das histórias mais perturbadoras de Stephen King.''',
+  category: 'Suspense',
+  );
+
+temModel garotaExem = ItemMode(
+  itemName: 'Garota exemplar ',
+  imgUrl: 'assets/livros/garotaExem.jpg',
+  price: 20.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''O livro começa no dia do quinto aniversário de casamento de Nick e Amy Dunne, quando a linda e inteligente esposa de Nick desaparece da casa deles às margens do rio Mississippi. Sinais indicam que se trata de um sequestro violento e Nick rapidamente se torna o principal suspeito. Sob pressão da polícia, da mídia e dos ferozmente amorosos pais de Amy, Nick desfia uma série interminável de mentiras, meias verdades e comportamento inapropriado. Ele é evasivo e amargo — mas seria um assassino? Ao mesmo tempo, passagens do diário de Amy revelam um casamento tumultuado — mas ela estaria contando toda a história?''',
+  category: 'Suspense',
+  );
+
+
 
 List<ItemModel> items = [
   //Romance
@@ -484,7 +517,7 @@ List<ItemModel> items = [
   aMaldicao,
   oPrincipe,
   oLadrao,
-  aBiblioteca
+  aBiblioteca,
   //Terror
   oCemiterio,
   oVilarejo,
@@ -495,15 +528,17 @@ List<ItemModel> items = [
   aHoraLobisomen,
   oBebeDeRose,
   //Suspense
-
+  oHomemGiz,
+  outsider,
+  garotaExem,
   //Biografia
   tayHistoria,
   tayHistoriaCompleta,
   silvioSantos,
   emBusca,
   alexandreeCesar,
-  stanLee
-  barackOba
+  stanLee,
+  barackOba,
 
   //FicçãoCientifica
   comoParar,
