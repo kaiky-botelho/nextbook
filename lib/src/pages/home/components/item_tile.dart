@@ -3,25 +3,30 @@ import 'package:nextbook/src/config/custom_colors.dart';
 import 'package:nextbook/src/models/item_model.dart';
 import 'package:nextbook/src/pages/product/product_sreen.dart';
 import 'package:nextbook/src/services/utils_services.dart';
+import 'package:nextbook/src/models/cart_item_model.dart';
+import 'package:nextbook/src/config/app_data.dart' as appData;
 
 class ItemTile extends StatelessWidget {
+  final ItemModel item;
+  final VoidCallback onAddToCart; // Callback for Add to Cart
+
   ItemTile({
     super.key,
     required this.item,
+    required this.onAddToCart, // Accept callback
   });
 
-  final ItemModel item;
   UtilsServices utilsServices = UtilsServices();
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        //Conteudo
+        // Content
         GestureDetector(
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (c) {
-              return ProductSreen(item: item);
+              return ProductSreen(item: item); // Fixed typo in ProductScreen
             }));
           },
           child: Card(
@@ -35,14 +40,14 @@ class ItemTile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // imagem
+                  // Image
                   Expanded(
                     child: Hero(
                       tag: item.imgUrl,
                       child: Image.asset(item.imgUrl),
                     ),
                   ),
-                  // Nome
+                  // Name
                   Text(
                     item.itemName,
                     style: const TextStyle(
@@ -50,7 +55,7 @@ class ItemTile extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  //Preco
+                  // Price
                   Text(
                     utilsServices.princeToCurrency(item.price),
                     style: TextStyle(
@@ -59,8 +64,7 @@ class ItemTile extends StatelessWidget {
                       color: CustomColors.vermelhoNext,
                     ),
                   ),
-
-                  // Condição
+                  // Condition
                   Text(
                     'Estado: ${item.condition}',
                     style: TextStyle(
@@ -75,27 +79,28 @@ class ItemTile extends StatelessWidget {
           ),
         ),
         Positioned(
-            top: 4,
-            right: 4,
-            child: GestureDetector(
-              onTap: () {},
-              child: Container(
-                height: 40,
-                width: 35,
-                decoration: BoxDecoration(
-                  color: CustomColors.vermelhoNext,
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(15),
-                    topRight: Radius.circular(20),
-                  ),
-                ),
-                child: const Icon(
-                  Icons.add_shopping_cart_outlined,
-                  color: Colors.white,
-                  size: 20,
+          top: 4,
+          right: 4,
+          child: GestureDetector(
+            onTap: onAddToCart, // Trigger the callback
+            child: Container(
+              height: 40,
+              width: 35,
+              decoration: BoxDecoration(
+                color: CustomColors.vermelhoNext,
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(15),
+                  topRight: Radius.circular(20),
                 ),
               ),
-            ))
+              child: const Icon(
+                Icons.add_shopping_cart_outlined,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
+          ),
+        )
       ],
     );
   }

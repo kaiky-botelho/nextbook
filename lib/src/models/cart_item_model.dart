@@ -1,13 +1,25 @@
 import 'package:nextbook/src/models/item_model.dart';
 
 class CartItemModel {
-  ItemModel item;
+  final ItemModel item;
   int quantity;
 
   CartItemModel({
     required this.item,
-    required this.quantity,
+    this.quantity = 1,
   });
 
-  double totalPrice() => item.price * quantity;
+  double totalPrice() {
+    return item.price * quantity;
+  }
+
+  void incrementQuantity() {
+    quantity++;
+  }
+
+  void decrementQuantity() {
+    if (quantity > 1) {
+      quantity--;
+    }
+  }
 }
