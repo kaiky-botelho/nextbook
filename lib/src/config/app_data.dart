@@ -396,7 +396,75 @@ ItemModel armada = ItemModel(
 
 // Biografia
 
+ItemModel tayHistoria = ItemModel(
+  itemName: 'Tay - A História de Taylor Swift',
+  imgUrl: 'assets/livros/tay.jpg',
+  price: 19.89,
+  unit:'und',
+  condition: 'Usado',
+  description: 'Na entrada do prédio, Taylor caminhou até a recepcionista. “Oi, meu nome é Taylor Swift. Tenho 11 anos e quero um contrato de gravação.” Ela entregou seu CD à mulher. “Me ligue”, disse, abrindo um sorriso bem alegre. “Ela disse que eu era bonita”, contou Taylor ao voltar para o carro. “O de sempre. Vá e volte quando tiver 18 anos.” Taylor olhava pela janela lateral do carro, enquanto sua mãe dirigia devagar pelo Music Row em Nashville, Tennessee. Quando passaram em frente ao famoso Bluebird Café, ela disse: “Um dia eu vou cantar aí”. A história de vida da grande ganhadora dos Grammys de álbum do ano 2016, pelo disco “1989”, melhor álbum pop vocal e melhor videoclipe por “Bad Blood”, está na Madras Editora. Tay – A História de Taylor Swift é um livro para toda fã da cantora que está encantando o mundo com sua música e seu modo de ser.',
+  category: 'Biografia',
+);
 
+ItemModel tayHistoriaCompleta = ItemModel(
+  itemName: 'Taylor Swift: A história completa',
+  imgUrl: 'assets/livros/aHistoriaCompleta.jpg',
+  price: 45.90,
+  unit:'und',
+  condition: 'Novo',
+  description: 'Taylor Swift foi de jovem talentosa de uma cidade pequena a artista ganhadora de prêmios e estrela mundial, constantemente no topo das paradas e quebrando recordes de vendas e de público. Mas como ela chegou lá? E o que o futuro reserva para a loirinha? Quando criança, Taylor sonhava em se apresentar para multidões de fãs. Determinada, ainda adolescente ela teve o apoio dos pais para investir na carreira musical e transformou a sinceridade de suas letras em marca registrada. Em Taylor Swift: A história completa Chas Newkey-Burden apresenta a jornada da cantora, incluindo os desafios de ser levada a sério em uma indústria comandada por homens, a determinação de ser a dona de sua obra e a constante pressão de se superar a cada novo álbum. Com detalhes fascinantes que revelam a verdadeira Taylor, Taylor Swift: A história completa não deixa de fora o que inspira e motiva a cantora e compositora, aborda os diversos desafios que surgiram ao longo da trajetória de Taylor e como ela os superou. Analisa, também, a forte imagem construída e consolidada pela artista e a verdade sobre seus relacionamentos amorosos, inspiração para muitas de suas letras. Da infância na Pensilvânia aos obstáculos superados na escalada para o sucesso, dos relacionamentos com Harry Styles, Joe Alwyn e Travis Kelce à The Eras Tour – que quebrou recordes de bilheteria pelo mundo –, Taylor Swift: A história completa é um relato imperdível da jornada de uma jovem que amadureceu sob os holofotes e agora domina o mundo.',
+  category: 'Biografia',
+);
+
+ItemModel silvioSantos = ItemModel(
+  itemName: 'Silvio Santos: A biografia',
+  imgUrl: 'assets/livros/Silvio.jpg',
+  price: 23.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Seu nome é Senor Abravanel , mais conhecido como Silvio Santos . Sua característica mais marcante é a generosidade, eternizada no famoso bordão 'quem quer dinheiro?'. A boa índole de Silvio Santos, inclusive, é uma faceta de sua personalidade, a qual dez em cada dez de seus funcionários faz questão de ressaltar. Compreendendo os 86 anos da figura icônica que impactou a história e a rotina de milhões de brasileiros, este livro revela, inclusive por meio de relatos e documentos exclusivos, as conquistas e dificuldades que Silvio enfrentou para ser a unanimidade que é hoje: o lado família, o apresentador, o gestor de negócios, o descobridor de talentos, como se deram seus insights de empreendedor, além de inúmeras passagens impressionantes de uma trajetória riquíssima e encorajadora. Entre erros e acertos, recordes de audiência e insucessos, Senor Abravanel construiria um império que, somente com o SBT, já chegou a faturar mais de um bilhão de reais. Assertivo em suas decisões, ele não teme falar o que pensa ou acreditar no que ninguém mais acredita e tudo isso porque sua visão vai além do óbvio. Silvio Santos vem aí!''',
+  category: 'Biografia',
+);
+
+ItemModel emBusca = ItemModel(
+  itemName: 'Em busca de mim',
+  imgUrl: 'assets/livros/emBusca.jpg',
+  price: 34.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Em busca de mim conta a minha história, de um apartamento caindo aos pedaços na cidade de Central Falls, em Rhode Island, para os palcos de Nova York e além. Este é o caminho que percorri em busca de propósito e força, mas também para me fazer ser ouvida em um mundo que não me percebia.Enquanto escrevia Em busca de mim , pensei no quanto nossas histórias nem sempre recebem a devida atenção. São reinventadas para serem encaixadas em um mundo louco, competitivo e crítico. Escrevi este livro para aqueles que se sentem excluídos, que estão em busca de uma forma de entender e superar um passado complicado e encontrar autoaceitação no lugar da vergonha.Escrevi para quem precisa se lembrar de que a vida só vale a pena ser vivida se a encararmos com honestidade radical e coragem de abandonar as máscaras e apenas ser... você.Em busca de mim é uma reflexão profunda, uma promessa e uma declaração de amor a mim mesma. Espero que minha história o inspire a revolucionar sua vida de forma criativa e a redescobrir quem você era antes que o mundo tentasse defini-lo.''',
+  category: 'Biografia',
+);
+
+ItemModel alexandreeCesar = ItemModel(
+  itemName: 'Alexandre e César: As vidas comparadas dos maiores guerreiros da Antiguidade',
+  imgUrl: 'assets/livros/alexandreEcesar.jpg',
+  price: 12.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Nesta obra-prima, o autor nos presenteia com a fascinante trajetória de dois dos maiores líderes da Antiguidade: Alexandre, o lendário conquistador da Macedônia, que unificou o Oriente e o Ocidente, e Júlio César, o estrategista brilhante e político astuto que personificou a glória e o poder de Roma. Em um texto claro, conciso e cativante, Plutarco mergulha nas vidas desses icônicos personagens, revelando suas proezas, desafios e até mesmo suas fraquezas humanas. Com uma edição repleta de imagens que ilustram a grandiosidade desses tempos remotos, o livro traz uma experiência visualmente enriquecedora e imersiva para o leitor. Se você é apaixonado por história, admirador de grandes líderes e busca uma leitura empolgante e repleta de aprendizado, Alexandre e César é a escolha perfeita. Descubra como esses dois homens extraordinários moldaram o curso da civilização antiga, e desfrute de uma viagem inesquecível por uma era de intrigas, conquistas e poder!''',
+  category: 'Biografia',
+);
+
+ItemModel stanLee = ItemModel(
+  itemName: 'Invencível: A ascensão e a queda de Stan Lee',
+  imgUrl: 'assets/livros/stanLee.jpg',
+  price: 22.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Invencível é a biografia definitiva e sem meias-verdades do icônico artista e empreendedor que redefiniu a cultura pop, tarefa que lhe cobrou um alto custo na vida pessoal. Stan Lee foi editor-chefe da Marvel por três décadas, onde lançou personagens inesquecíveis, como Homem-Aranha, Thor, Pantera Negra, os X-Men, o Incrível Hulk, Homem de Ferro... para citar apenas alguns. Além disso, sua paixão e personalidade extravagante salvaram mais de uma vez a indústria dos quadrinhos da extinção.''',
+  category: 'Biografia',
+);
+
+ItemModel barackOba = ItemModel(
+  itemName: 'Uma terra prometida',
+  imgUrl: 'assets/livros/barack.jpg',
+  price: 10.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''No comovente e aguardado primeiro volume de suas memórias presidenciais, Barack Obama narra, nas próprias palavras, a história de sua odisseia improvável, desde quando era um jovem em busca de sua identidade até se tornar líder da maior democracia do mundo. Com detalhes surpreendentes, ele descreve sua formação política e os momentos marcantes do primeiro mandato de sua presidência histórica ― época de turbulências e transformações drásticas.''',
+  category: 'Biografia',
+);
 
 List<ItemModel> items = [
   //Romance
@@ -435,6 +503,7 @@ List<ItemModel> items = [
   emBusca,
   alexandreeCesar,
   stanLee
+  barackOba
 
   //FicçãoCientifica
   comoParar,
@@ -446,6 +515,9 @@ List<ItemModel> items = [
   oFiDaMorte,
   jogadorNu1,
   armada,
+
+  //Quadrinhos
+
 ];
 
 List<String> categories = [
@@ -455,6 +527,7 @@ List<String> categories = [
   'Suspense',
   'Fantasia',
   'Biografia',
+  'Quadrinhos'
 ];
 
 List<CartItemModel> cartItems = [
