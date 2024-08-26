@@ -305,6 +305,99 @@ ItemModel oBebeDeRose = ItemModel(
 
 //Ficção Cientifica
 
+ItemModel comoParar = ItemModel(
+  itemName: 'Como Parar o Tempo',
+  imgUrl: 'assets/livros/comoParar.jpg',
+  price: 20.00,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'Tom Hazard esconde um segredo perigoso. Ele pode aparentar ser um quarentão normal, mas por causa de uma estranha condição está vivo há séculos. Da Inglaterra elisabetana à era do jazz parisiense, e de Nova York aos mares do sul, Tom já testemunhou tanto que agora precisa apenas de uma vida normal. Sempre trocando a identidade para se manter a salvo, ele encontra o disfarce perfeito trabalhando como professor de História em Londres. Assim, pode trazer suas experiências do passado como fatos vivos. Pode manipular as histórias para seus alunos. Pode levar uma vida normal. Tom só não pode se esquecer da primeira regra. Aquela sobre paixão... Como parar o tempo é um romance doce e envolvente sobre como se perder e se encontrar na própria história. É sobre as certezas da mudança dos tempos e o tempo que a vida leva para nos ensinar como vivê-la.',
+  category: 'Ficção Científica',
+);
+
+ItemModel floresParaAlge = ItemModel(
+  itemName: 'Flores Para Algernon',
+  imgUrl: 'assets/livros/FloresAlge.jpg',
+  price: 15.30,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'Uma cirurgia revolucionária promete aumentar o QI do paciente. Charlie Gordon, um homem com deficiência intelectual severa, é selecionado para ser o primeiro humano a passar pelo procedimento. O experimento é um avanço científico sem precedentes, e a inteligência de Charlie aumenta tanto que ultrapassa a dos médicos que o planejaram. Entretanto, Charlie passa a ter novas percepções da realidade e começa a refletir sobre suas relações sociais e até o papel de sua existência.',category: 'Ficção Científica',
+);
+
+ItemModel nadaMaisComo = ItemModel(
+  itemName: 'Nada mais será como antes',
+  imgUrl: 'assets/livros/nadaMais.jpg',
+  price: 35.89,
+  unit: 'und',
+  condition: 'Novo'
+  description: 'Em um mundo que já começa a colapsar pela falta de cuidado com o meio ambiente, uma catástrofe sem precedentes na história moderna se aproxima, trazendo consigo o poder de destruir toda a civilização eletrônico-digital. Momentos antes do impacto, um matemático e uma neurocientista, tio e sobrinha, tentam lidar ao mesmo tempo com seus dilemas pessoais e o possível colapso do planeta. Em paralelo, uma enorme conspiração mundial, com seus próprios interesses e ambições, está disposta a controlar as mentes e os destinos da humanidade',
+  category: 'Ficção Científica',
+);
+
+ItemModel oProblemaTres = ItemModel(
+  itemName: 'O problema dos três corpos: 1',
+  imgUrl: 'assets/livros/oProblema.jpg',
+  price: 19.65,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'China, final dos anos 1960. Enquanto o país inteiro está sendo devastado pela violência da Revolução Cultural, um pequeno grupo de astrofísicos, militares e engenheiros começa um projeto ultrassecreto envolvendo ondas sonoras e seres extraterrestres. Uma decisão tomada por um desses cientistas mudará para sempre o destino da humanidade e, cinquenta anos depois, uma civilização alienígena a beira do colapso planeja uma invasão. O problema dos três corpos é uma crônica da marcha humana em direção aos confins do universo. Uma clássica história de ficção científica, no melhor estilo de Arthur C. Clarke. Um jogo envolvente em que a humanidade tem tudo a perder',
+  category: 'Ficção Científica',
+);
+
+ItemModel aRevoltadeAtlas = ItemModel(
+  itemName: 'A revolta de Atlas',
+  imgUrl: 'assets/livros/Atlas.jpg',
+  price: 25.54,
+  unit: 'und',
+  condition:'Novo',
+  description: 'Considerado o livro mais influente nos Estados Unidos depois da Bíblia, segundo a Biblioteca do Congresso americano, A revolta de Atlas é um romance monumental. A história se passa numa época imprecisa, quando as forças políticas de esquerda estão no poder. Último baluarte do que ainda resta do capitalismo num mundo infestado de repúblicas populares, os Estados Unidos estão em decadência e sua economia caminha para o colapso. Nesse cenário desolador em que a intervenção estatal se sobrepõe a qualquer iniciativa privada de reerguer a economia, os principais líderes da indústria, do empresariado, das ciências e das artes começam a sumir sem deixar pistas. Com medidas arbitrárias e leis manipuladas, o Estado logo se apossa de suas propriedades e invenções, mas não é capaz de manter a lucratividade de seus negócios.',
+  category: 'Ficção Científica',
+);
+
+ItemModel aGuerradaPapoula = ItemModel(
+  itemName: 'A guerra da papoula vol.1',
+  imgUrl: 'assets/livros/aGuerra.jpg',
+  price: 34.75,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'A guerra está no coração do Império Nikara, e o ópio corre em suas veias. No passado, os heróis que formaram a Trindade uniram a nação contra a poderosa Federação de Mugen, e acreditava-se que eles caminhavam entre os deuses. Décadas depois, a paz reina, mas há boatos de que a Terceira Guerra da Papoula pode estourar a qualquer momento, e a academia militar mais prestigiada do Império prepara seus estudantes para o combate: filhos da elite e, inesperadamente, uma órfã de guerra. Obrigada a se casar com um homem asqueroso, a jovem Rin fez de tudo para reescrever o próprio destino. Estudou para o exame imperial por pura teimosia e, quando conseguiu uma vaga na academia, acreditou estar salva. Mas ela logo aprende que uma garota pobre e de pele escura não tem muito valor naquele lugar. Hostilizada pelos professores e colegas, Rin treina com afinco. Com a ajuda de um mestre excêntrico e de substâncias psicoativas, a jovem passa a cultivar poderes xamânicos e a acessar a força incandescente de uma deusa vingativa, a perigosa Fênix.',
+  category: 'Ficção Científica',
+);
+
+ItemModel oFiDaMorte = ItemModel(
+  itemName: 'O fim da morte: 3',
+  imgUrl: 'assets/livros/oFim.jpg',
+  price: 25.39,
+  unit: 'und',
+  condition: 'Novo',
+  description: 'Neste terceiro volume, meio século se passou desde a Batalha do Fim do Mundo, e a Terra conquistou um frágil acordo para manter os invasores trissolarianos encurralados. Com ele, uma nova era de paz e prosperidade tem início, e Luo Ji ― o homem que elaborou o acordo, agora conhecido como Portador da Espada ― tem que carregar nas costas a vida de duas civilizações. Enquanto isso, Cheng Xin, uma engenheira aeroespacial do início do século XXI, desperta da hibernação nessa nova época. Luo Ji está velho, e um novo Portador da Espada deve tomar seu lugar. Será que Cheng Xin é capaz de suportar a responsabilidade de manter a Terra em segurança? E por que um antigo projeto, da época da Crise Trissolariana, não sai de sua mente? O destino da humanidade está em jogo ― estará nosso destino nas estrelas, ou permaneceremos no berço de nossa civilização até o fim?',
+  category: 'Ficção Científica',
+);
+
+ItemModel jogadorNu1 = ItemModel(
+  itemName: 'Jogador Número 1',
+  imgUrl: 'assets/livros/jogador.jpg',
+  price: 32.65,
+  unit: 'und',
+  condition: 'Novo',
+  description: 'Um mundo em jogo, a busca pelo grande prêmio. Você está preparado, Jogador número 1? O ano é 2044 e a Terra não é mais a mesma. Fome, guerras e desemprego empurraram a humanidade para um estado de apatia nunca antes visto.Wade Watts é mais um dos que escapa da desanimadora realidade passando horas e horas conectado ao OASIS ? uma utopia virtual global que permite aos usuários ser o que quiserem, um lugar onde se pode viver e se apaixonar em qualquer um dos mundos inspirados nos filmes, videogames e cultura pop dos anos 1980.Mas a possibilidade de existir em outra realidade não é o único atrativo do OASIS, o falecido James Halliday, bilionário e criador do jogo, escondeu em algum lugar desse imenso playground uma série de easter-eggs que premiará com sua enorme fortuna ? e poder ? aquele que conseguir desvendá-los. E Wade acabou de encontrar o primeiro deles.',
+  category: 'Ficção Científica',
+);
+
+ItemModel armada = ItemModel(
+  itemName: 'Armada',
+  imgUrl: 'assets/livros/armada.jpg',
+  price: 12.60,
+  unit:'und',
+  condition: 'Usado',
+  description: 'Durante toda a sua vida, Zack Lightman quis que o mundo real fosse menos chato. Segundo ele, a realidade poderia ser mais parecida com o universo dos livros de ficção científica, filmes e videogames. Poderia acontecer algo fantástico para que sua vida deixasse de ser monótona, levando-o a uma aventura – e por que não uma aventura espacial? Apesar disso, Zack diz a si mesmo saber a diferença entre a fantasia e a realidade e que jogadores de videogames adolescentes e sem objetivos na vida não são os salvadores do universo. Então, um dia, durante a aula de matemática, ele a vê pela janela: uma nave que se parece com o caça Glaive do videogame on-line de simulação de voo que ele joga todas as noites, Armada, que tem como objetivo proteger a Terra de uma invasão alienígena. Agora isso está realmente acontecendo. E suas habilidades, assim como as de milhões de jogadores no mundo, são necessárias para salvar o planeta da destruição.',
+  category: 'Ficção Científica',
+);
+
+// Biografia
+
+
+
 List<ItemModel> items = [
   //Romance
   hipotese,
@@ -336,8 +429,23 @@ List<ItemModel> items = [
   //Suspense
 
   //Biografia
+  tayHistoria,
+  tayHistoriaCompleta,
+  silvioSantos,
+  emBusca,
+  alexandreeCesar,
+  stanLee
 
   //FicçãoCientifica
+  comoParar,
+  floresParaAlge,
+  nadaMaisComo,
+  oProblemaTres,
+  aRevoltadeAtlas,
+  aGuerradaPapoula,
+  oFiDaMorte,
+  jogadorNu1,
+  armada,
 ];
 
 List<String> categories = [
