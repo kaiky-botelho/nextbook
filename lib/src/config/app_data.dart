@@ -90,7 +90,143 @@ ItemModel amorGelo = ItemModel(
 
 );
 
+//Fantasia 
+
+ItemModel quartAsa = ItemModel( 
+
+  itemName: 'Quarta Asa: 1', 
+
+  imgUrl: 'assets/livros/Quart_Asa.jpg', 
+
+  price: 30.90, 
+
+  unit: 'und', 
+
+  condition: 'Novo', 
+
+  description: ' Violet Sorrengail, uma jovem de vinte anos, estava destinada a entrar na Divisão dos Escribas, levando uma vida relativamente tranquila entre os livros e as aulas de História. No entanto, a general comandante das forças de Navarre – também conhecida como sua mãe –, durona como as garras de um dragão, ordena que Violet se junte às centenas de candidatos que buscam se tornar a elite de seu país: cavaleiros de dragões. O problema é que, quando você é menor que todos os demais candidatos e certamente mais frágil que eles, a morte está a apenas uma batida de coração de distância... Porque os dragões não se unem a humanos "frágeis". Eles os reduzem a cinzas. Todos no Instituto Militar Basgiath têm um objetivo. Com menos dragões disponíveis que cadetes, a maioria estaria disposta a matar Violet para aumentar suas próprias chances de sucesso. O restante a mataria apenas por ser filha de quem é – e um bom exemplo disso parece ser Xaden Riorson, o líder de esquadrão mais poderoso e implacável na Divisão dos Cavaleiros. 
+Entre amigos, inimigos e amantes, Violet precisará contar com sua inteligência se quiser sobreviver. Mas as proteções do reino estão falhando e a cada dia que passa a guerra se torna mais mortal. E o pior: Violet começa a suspeitar que a liderança está escondendo um terrível segredo. ', 
+
+    category: 'Fantasia', 
+); 
+ItemModel oHobit = ItemModel( 
+
+  itemName: 'O Hobit', 
+
+  imgUrl: 'assets/livros/oHobitt.jpg', 
+
+  price: 24.90, 
+
+  unit: 'und', 
+
+  condition: 'Usado', 
+
+  description: 'Bilbo Bolseiro era um dos mais respeitáveis hobbits de todo o Condado até que, um dia, o mago Gandalf bate à sua porta. A partir de então, toda sua vida pacata e campestre soprando anéis de fumaça com seu belo cachimbo começa a mudar. Ele é convocado a participar de uma aventura por ninguém menos do que Thorin Escudo-de-Carvalho, um príncipe do poderoso povo dos Anãos. Esta jornada fará Bilbo, Gandalf e 13 anãos atravessarem a Terra-média, passando por inúmeros perigos, como os imensos trols, as Montanhas Nevoentas infestadas de gobelins ou a muito antiga e misteriosa Trevamata, até chegarem (se conseguirem) na Montanha Solitária. Lá está um incalculável tesouro, mas há um porém. Deitado em cima dele está Smaug, o Dourado, um dragão malicioso que... bem, você terá que ler para descobrir. Lançado em 1937, O Hobbit é um divisor de águas na literatura de fantasia mundial. Mais de 80 anos após a sua publicação, o livro que antecede os ocorridos em O Senhor dos Anéis continua arrebatando fãs de todas as idades, talvez pelo seu tom brincalhão com uma pitada de magia élfica, ou talvez porque J.R.R. Tolkien tenha escrito o melhor livro infantojuvenil de todos os tempos.', 
+
+    category: 'Fantasia', 
+); 
+
+ItemModel aVidaInvi = ItemModel( 
+
+  itemName: 'A vida invisível de Addie LaRue', 
+
+  imgUrl: 'assets/livros/aVidaInvisivel.jpg', 
+
+  price: 35.90, 
+
+  unit: 'und', 
+
+  condition: 'Usado', 
+
+  description: ' França: 1714. Addie LaRue não queria pertercer a ninguém ou a lugar nenhum. Em um momento de desespero, a jovem faz um pacto: a vida eterna, sob a condição de ser esquecida por quem a conhecer. Um piscar de olhos, e, como um sopro, Addie se vai. Uma virada de costas, e sua existência se dissipa na memória de todos. Após tanto tempo vivendo uma existência deslumbrante, aproveitando a vida de todas as formas, fazendo uso de tantos artifícios quanto fosse possível e viajando pelo tempo e espaço, através dos séculos e continentes, da história e da arte, Addie entende seus limites e descobre — apesar de fadada ao esquecimento — até onde é capaz de ir para deixar sua marca no mundo. Trezentos anos depois, em uma livraria, um acontecimento inesperado: Addie LaRue esbarra com um rapaz. Ele enuncia cinco palavras. Cinco palavras capazes de colocar a vida que conhecia abaixo: Eu me lembro de você. Uma jornada inspirada no mito faustiano sobre busca e perda, eternidade e finitude e, acima de tudo, uma questão: até onde se vai para alcançar a liberdade? Best-seller do The New York Times e recomendado pelo Entertainment Weekly, A vida invisível de Addie LaRue é um livro inesquecível e que colocou V.E. Schwab entre as principais autoras de fantasia da atualidade.', 
+
+    category: 'Fantasia', 
+); 
+
+ItemModel oDiario = ItemModel( 
+
+  itemName: 'O diário perdido de Gravity falls', 
+
+  imgUrl: 'assets/livros/oDiario.jpg', 
+
+  price: 47.90, 
+
+  unit: 'und', 
+
+  condition: 'Novo', 
+
+  description: 'Você possui em suas mãos o cobiçado diário do autor da série Gravity Falls, um tesouro de 288 páginas coloridas e sem dono, com segredos nunca antes revelados, monstros e mistérios da pacata cidade do Tivô Stan. Com ele, você irá aprender a trágica história de Ford, o paradeiro de Blendin, qual é a Dimensão 52 e como atrair um “ornitorrinco xadrez”. Mas cuidado: este é um livro desejado por muitas forças sombrias, por isso fique alerta se qualquer um quiser tirá-lo de você (especialmente se tiverem olhos amarelos e brilhantes). E, o mais importante, divirta-se. Afinal, não existe um lugar como Gravity Falls. Ou será que existe?', 
+
+    category: 'Fantasia', 
+); 
+ItemModel  aMaldicao = ItemModel( 
+
+  itemName: 'A maldição do verdadeiro amor', 
+
+  imgUrl: 'assets/livros/aMaldicao.jpg', 
+
+  price: 35.90, 
+
+  unit: 'und', 
+
+  condition: 'Novo', 
+
+  description: 'Ao se aventurar pelo Magnifico Norte, Evangeline Raposa continuava em busca de seu final feliz. Após acordar sem se recordar do passado, ela se vê casada com Apollo e o lendário castelo do príncipe é, aparentemente, sua nova morada. Porém, para viver esse suposto conto de fadas, Evangeline precisou pagar um preço devastador sem nem ao menos fazer ideia disso. Ela desconhece tudo aquilo que perdeu, e se depender de seu marido… a jovem nunca descobrirá. Ele está tão determinado a garantir a ignorância de sua esposa que pretende dar um fim à vida de Jacks – o Príncipe de Copas. Com sangue sendo derramado e corações sendo usurpados, o verdadeiro amor vai ser colocado à prova no último livro da trilogia Era uma vez um coração partido. A maldição do verdadeiro amor é a aguardada conclusão desta história encantadora que arrebatou corações ao redor do mundo.', 
+
+    category: 'Fantasia', 
+); 
+ItemModel  oPrincipe = ItemModel( 
+
+  itemName: 'O príncipe cruel: 1', 
+
+  imgUrl: 'assets/livros/oPrincipe.jpg', 
+
+  price: 25.90, 
+
+  unit: 'und', 
+
+  condition: 'Usado', 
+
+  description: 'Jude tinha apenas sete anos quando seus pais foram brutalmente assasinados e ela e as irmãs levadas para viver no traiçoeiro Reino das Fadas. Dez anos depois, tudo o que Jude quer é se encaixar, mesmo sendo uma garota mortal. Mas todos os feéricos parecem desprezar os humanos... Especialmente o príncipe Cardan, o mais jovem e mais perverso dos filhos do Grande Rei de Elfhame. Para conquistar o tão desejado lugar na Corte, Jude precisa desafiar o príncipe - e enfrentar as consequências do ato. A garota passa, então, a se envolver cada vez mais nos jogos e intrigas do palácio, e acaba descobrindo a própria vocação para trapaças e derramamento de sangue. Mas quando uma traição ameaça afogar o Reindo das Fadas em violência, Jude precisará arriscar tudo em uma perigosa aliança para salvar suas irmãs e a própria Elfhame. Cercada por mentiras e pessoas que desejam destruí-la , Jude terá que descobrir o verdadeiro significado da palavra poder antes que seja tarde demais.', 
+
+    category: 'Fantasia', 
+); 
+ItemModel  oLadrao = ItemModel( 
+
+  itemName: 'O ladrão de Raios: 1', 
+
+  imgUrl: 'assets/livros/oLadrao.jpg', 
+
+  price: 36.90, 
+
+  unit: 'und', 
+
+  condition: 'Usado', 
+
+  description: 'Nessa primeira aventura da série que conquistou fãs no mundo todo e deu a Riordan o título de “contador de histórias dos deuses”, conhecemos Percy Jackson, um garoto de 12 anos que está prestes a ser expulso do colégio interno. De novo. É a sexta vez que isso acontece. Percy tem que lidar com as consequências do transtorno do déficit de atenção e da dislexia, o que não torna sua vida lá muito fácil. Só que, ultimamente, criaturas fantásticas e os deuses do Monte Olimpo parecem estar saindo dos livros de mitologia grega do colégio para a realidade. Ao que tudo indica, tem um pessoal bem irritado com o pobre garoto. Vários acidentes e revelações inexplicáveis afastam Percy de Nova York, sua cidade, e o lançam em um campo de treinamento muito especial, onde ele é orientado para enfrentar uma missão que envolve humanos diferentes ― metade deuses, metade homens ―, além de seres mitológicos. O raio-mestre de Zeus foi roubado, e é Percy quem deve resgatá-lo. Com a ajuda de novos amigos ― um sátiro e a filha de uma deusa ―, Percy tem dez dias para reaver o raio, que representa a destruição original, e restabelecer a paz no Olimpo. Para conseguir isso, ele precisará fazer mais que capturar um ladrão. Terá que lidar com o pai que o abandonou, resolver uma profecia proposta pelo Oráculo e desvendar uma traição mais ameaçadora que a fúria dos deuses.', 
+    category: 'Fantasia', 
+); 
+
+ItemModel  aBiblioteca = ItemModel( 
+
+  itemName: 'A Biblioteca da Meia-Noite
+', 
+
+  imgUrl: 'assets/livros/aBiblioteca.jpg', 
+
+  price: 46.90, 
+
+  unit: 'und', 
+
+  condition: 'Novo', 
+
+  description: 'os 35 anos, Nora Seed é uma mulher cheia de talentos e poucas conquistas. Arrependida das escolhas que fez no passado, ela vive se perguntando o que poderia ter acontecido caso tivesse vivido de maneira diferente. Após ser demitida e seu gato ser atropelado, Nora vê pouco sentido em sua existência e decide colocar um ponto final em tudo. Porém, quando se vê na Biblioteca da Meia-Noite, Nora ganha uma oportunidade única de viver todas as vidas que poderia ter vivido. Neste lugar entre a vida e a morte, e graças à ajuda de uma velha amiga, Nora pode, finalmente, se mudar para a Austrália, reatar relacionamentos antigos – ou começar outros –, ser uma estrela do rock, uma glaciologista, uma nadadora olímpica... enfim, as opções são infinitas. Mas será que alguma dessas outras vidas é realmente melhor do que a que ela já tem? Em A Biblioteca da Meia-Noite , Nora Seed se vê exatamente na situação pela qual todos gostaríamos de poder passar: voltar no tempo e desfazer algo de que nos arrependemos. Diante dessa possibilidade, Nora faz um mergulho interior viajando pelos livros da Biblioteca da Meia-Noite até entender o que é verdadeiramente importante na vida e o que faz, de fato, com que ela valha a pena ser vivida.', 
+    category: 'Fantasia', 
+); 
+
+
 List<ItemModel> items = [
+  //Romance
   hipotese,
   melhorFilme,
   orgulho,
@@ -99,6 +235,16 @@ List<ItemModel> items = [
   leituraVerao,
   turneHeart,
   amorGelo,
+  //Fantasia
+  quartAsa,
+  oHobit,
+  aVidaInvi,
+  oDiario,
+  aMaldicao,
+  oPrincipe,
+  oLadrao,
+  aBiblioteca
+  //Terror
 ];
 
 List<String> categories = [
