@@ -104,11 +104,11 @@ ItemModel quartAsa = ItemModel(
 
   condition: 'Novo', 
 
-  description: ' Violet Sorrengail, uma jovem de vinte anos, estava destinada a entrar na Divisão dos Escribas, levando uma vida relativamente tranquila entre os livros e as aulas de História. No entanto, a general comandante das forças de Navarre – também conhecida como sua mãe –, durona como as garras de um dragão, ordena que Violet se junte às centenas de candidatos que buscam se tornar a elite de seu país: cavaleiros de dragões. O problema é que, quando você é menor que todos os demais candidatos e certamente mais frágil que eles, a morte está a apenas uma batida de coração de distância... Porque os dragões não se unem a humanos "frágeis". Eles os reduzem a cinzas. Todos no Instituto Militar Basgiath têm um objetivo. Com menos dragões disponíveis que cadetes, a maioria estaria disposta a matar Violet para aumentar suas próprias chances de sucesso. O restante a mataria apenas por ser filha de quem é – e um bom exemplo disso parece ser Xaden Riorson, o líder de esquadrão mais poderoso e implacável na Divisão dos Cavaleiros. 
-Entre amigos, inimigos e amantes, Violet precisará contar com sua inteligência se quiser sobreviver. Mas as proteções do reino estão falhando e a cada dia que passa a guerra se torna mais mortal. E o pior: Violet começa a suspeitar que a liderança está escondendo um terrível segredo. ', 
+  description: ' Violet Sorrengail, uma jovem de vinte anos, estava destinada a entrar na Divisão dos Escribas, levando uma vida relativamente tranquila entre os livros e as aulas de História. No entanto, a general comandante das forças de Navarre – também conhecida como sua mãe –, durona como as garras de um dragão, ordena que Violet se junte às centenas de candidatos que buscam se tornar a elite de seu país: cavaleiros de dragões. O problema é que, quando você é menor que todos os demais candidatos e certamente mais frágil que eles, a morte está a apenas uma batida de coração de distância... Porque os dragões não se unem a humanos "frágeis". Eles os reduzem a cinzas. Todos no Instituto Militar Basgiath têm um objetivo. Com menos dragões disponíveis que cadetes, a maioria estaria disposta a matar Violet para aumentar suas próprias chances de sucesso. O restante a mataria apenas por ser filha de quem é – e um bom exemplo disso parece ser Xaden Riorson, o líder de esquadrão mais poderoso e implacável na Divisão dos Cavaleiros. Entre amigos, inimigos e amantes, Violet precisará contar com sua inteligência se quiser sobreviver. Mas as proteções do reino estão falhando e a cada dia que passa a guerra se torna mais mortal. E o pior: Violet começa a suspeitar que a liderança está escondendo um terrível segredo. ', 
 
     category: 'Fantasia', 
 ); 
+
 ItemModel oHobit = ItemModel( 
 
   itemName: 'O Hobit', 
@@ -159,6 +159,7 @@ ItemModel oDiario = ItemModel(
 
     category: 'Fantasia', 
 ); 
+
 ItemModel  aMaldicao = ItemModel( 
 
   itemName: 'A maldição do verdadeiro amor', 
@@ -175,6 +176,7 @@ ItemModel  aMaldicao = ItemModel(
 
     category: 'Fantasia', 
 ); 
+
 ItemModel  oPrincipe = ItemModel( 
 
   itemName: 'O príncipe cruel: 1', 
@@ -191,6 +193,7 @@ ItemModel  oPrincipe = ItemModel(
 
     category: 'Fantasia', 
 ); 
+
 ItemModel  oLadrao = ItemModel( 
 
   itemName: 'O ladrão de Raios: 1', 
@@ -209,21 +212,98 @@ ItemModel  oLadrao = ItemModel(
 
 ItemModel  aBiblioteca = ItemModel( 
 
-  itemName: 'A Biblioteca da Meia-Noite
-', 
-
+  itemName: 'A Biblioteca da Meia-Noite', 
   imgUrl: 'assets/livros/aBiblioteca.jpg', 
-
   price: 46.90, 
-
   unit: 'und', 
-
   condition: 'Novo', 
-
   description: 'os 35 anos, Nora Seed é uma mulher cheia de talentos e poucas conquistas. Arrependida das escolhas que fez no passado, ela vive se perguntando o que poderia ter acontecido caso tivesse vivido de maneira diferente. Após ser demitida e seu gato ser atropelado, Nora vê pouco sentido em sua existência e decide colocar um ponto final em tudo. Porém, quando se vê na Biblioteca da Meia-Noite, Nora ganha uma oportunidade única de viver todas as vidas que poderia ter vivido. Neste lugar entre a vida e a morte, e graças à ajuda de uma velha amiga, Nora pode, finalmente, se mudar para a Austrália, reatar relacionamentos antigos – ou começar outros –, ser uma estrela do rock, uma glaciologista, uma nadadora olímpica... enfim, as opções são infinitas. Mas será que alguma dessas outras vidas é realmente melhor do que a que ela já tem? Em A Biblioteca da Meia-Noite , Nora Seed se vê exatamente na situação pela qual todos gostaríamos de poder passar: voltar no tempo e desfazer algo de que nos arrependemos. Diante dessa possibilidade, Nora faz um mergulho interior viajando pelos livros da Biblioteca da Meia-Noite até entender o que é verdadeiramente importante na vida e o que faz, de fato, com que ela valha a pena ser vivida.', 
     category: 'Fantasia', 
 ); 
 
+//Terror
+
+ItemModel oCemiterio = ItemModel(
+  itemName: 'O cemitério'
+  imgUrl: 'assets/livros/oCemiterio.jpg',
+  price: 16.90,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'Louis Creed, um jovem médico de Chicago, acredita que encontrou seu lugar em uma pequena cidade do Maine. A boa casa, o trabalho na universidade e a felicidade da esposa e dos filhos lhe trazem a certeza de que fez a melhor escolha. Num dos primeiros passeios pela região, conhecem um cemitério no bosque próximo à sua casa. Ali, gerações de crianças enterraram seus animais de estimação. Mas, para além dos pequenos túmulos, há um outro cemitério. Uma terra maligna que atrai pessoas com promessas sedutoras. Um universo dominado por forças estranhas capazes de tornar real o que sempre pareceu impossível. A princípio, Louis Creed se diverte com as histórias fantasmagóricas do vizinho Crandall. No entanto, quando o gato de sua filha Eillen morre atropelado e, subitamente, retorna à vida, ele percebe que há coisas que nem mesmo a sua ciência pode explicar. Que mistérios esconde o cemitério dos bichos? Terá o homem o direito de interferir no mundo dos mortos? Em busca das respostas, Louis Creed é levado por uma trama sobrenatural em que o limite entre a vida e a morte é inexistente. E, quando descobre a verdade, percebe que ela é muito pior que seus mais terríveis pesadelos. Pior que a própria morte - e infinitamente mais poderosa. A Capa Pode Variar.',
+  category: 'Terror'
+);
+
+ItemModel oVilarejo = ItemModel(
+  itemName: 'O cemitério'
+  imgUrl: 'assets/livros/oVilarejo.jpg',
+  price: 23.90,
+  unit: 'und',
+  condition: 'Novo',
+  description: 'Em 1589, o padre e demonologista Peter Binsfeld fez a ligação de cada um dos pecados capitais a um demônio, supostamente responsável por invocar o mal nas pessoas. É a partir daí que Raphael Montes cria sete histórias situadas em um vilarejo isolado, apresentando a lenta degradação dos moradores do lugar, e pouco a pouco o próprio vilarejo vai sendo dizimado, maculado pela neve e pela fome. As histórias podem ser lidas em qualquer ordem, sem prejuízo de sua compreensão, mas se relacionam de maneira complexa, de modo que ao término da leitura as narrativas convergem para uma única e surpreendente conclusão.',
+  category: 'Terror'
+);
+
+ItemModel oExorcista = ItemModel(
+  itemName: 'O Exorcista'
+  imgUrl: 'assets/livros/oExorcista.jpg',
+  price: 49.90,
+  unit: 'und',
+  condition: 'Novo',
+  description: 'Quatro décadas após chocar o mundo inteiro, O Exorcista permanece uma metáfora moderna do combate entre o sagrado e o profano, em um dos romances mais macabros já escritos. Inspirado no caso real do exorcismo de um adolescente, o escritor William Peter Blatty publicou em 1971 a perturbadora história de Chris MacNeil, uma atriz que sofre com inesperadas mudanças no comportamento da filha de 11 anos, Regan. Quando todos os esforços da ciência para descobrir o que há de errado com a menina falham e uma personalidade demoníaca parece vir à tona, Chris busca a ajuda da Igreja para tentar livrar a filha do que parece ser um raro caso de possessão. Cabe a Damien Karras, um padre da Universidade de Georgetown, salvar a alma de Regan.',
+  category: 'Terror'
+);
+
+ItemModel carrieEstranha = ItemModel(
+  itemName: 'Carrie, a estranha '
+  imgUrl: 'assets/livros/carrieEstranha.jpg',
+  price: 19.90,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'Carrie é uma adolescente tímida e solitária. Aos 16 anos, é completamente dominada pela mãe, uma fanática religiosa que reprime todas as vontades e descobertas normais aos jovens de sua idade. Para Carrie, tudo é pecado. Viver é enfrentar todo dia o terrível peso da culpa. Para os colegas de escola, e até para os professores, Carrie é uma garota estranha, incapaz de conviver com os outros. Cada vez mais isolada, ela sofre com o sarcasmo e o deboche dos colegas. No entanto, há um segredo por trás de sua aparência frágil: Carrie tem poderes sobrenaturais, é capaz de mover objetos com a mente. No dia de sua formatura, Carrie é surpreendida pelo convite de Tommy para a festa - algo que lhe dá a chance de se enxergar de outra forma pela primeira vez. O ato de crueldade que acontece naquele salão, porém, dá início a uma reviravolta cheia de terror e destruição. Chegou a hora do acerto de contas. Carrie, a estranha é um dos maiores clássicos de terror da literatura contemporânea e um dos livros mais aclamados de Stephen King.',
+  category: 'Terror'
+);
+
+ItemModel oIluminado = ItemModel(
+  itemName: 'O iluminado: 1'
+  imgUrl: 'assets/livros/oIluminado.jpg',
+  price: 15.57,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'O romance, magistralmente levado ao cinema por Stanley Kubrick, continua apaixonando (e aterrorizando) novas gerações de leitores. A luta assustadora entre dois mundos. Um menino e o desejo assassino de poderosas forças malignas. Uma família refém do mal. Nesta guerra sem testemunhas, vencerá o mais forte. Danny Torrance não é um menino comum. É capaz de ouvir pensamentos e transportar-se no tempo. Danny é iluminado. Será uma maldição ou uma bênção? A resposta pode estar guardada na imponência assustadora do hotel Overlook. Em O iluminado, quando Jack Torrance consegue o emprego de zelador no velho hotel, todos os problemas da família parecem estar solucionados. Não mais o desemprego e as noites de bebedeiras. Não mais o sofrimento da esposa, Wendy. Tranquilidade e ar puro para o pequeno Danny livrar-se das convulsões que assustam a família. Só que o Overlook não é um hotel comum. O tempo esqueceu-se de enterrar velhos ódios e de cicatrizar antigas feridas, e espíritos malignos ainda residem nos corredores. O hotel é uma chaga aberta de ressentimento e desejo de vingança. É uma sentença de morte. E somente os poderes de Danny podem fazer frente à disseminação do mal.',
+  category: 'Terror'
+);
+
+ItemModel oChamadoCthulhu = ItemModel(
+  itemName: 'O Chamado de Cthulhu'
+  imgUrl: 'assets/livros/oCthulhu.jpg',
+  price: 39.57,
+  unit: 'und',
+  condition: 'Novo',
+  description: '“De certa forma, imaginei Lovecraft como um diretor de cinema que acabara de me contratar para criar a arte conceitual de sua história. Então reli a história como se fosse um roteiro, selecionando as partes que era importante ilustrar”, explica Baranger. O resultado é esta edição luxuosa, em capa dura e formato grande, que permite apreciar as incríveis pinturas do artista em todos os detalhes, onde a atmosfera aterrorizante do autor salta aos olhos a cada página. “Tentei entrar na mente do autor para melhor transcrever seu universo. É por isso que minha versão é muito fiel. Não tentei modernizar Lovecraft, mas me ater às suas descrições, ao pé da letra.” A história começa em Boston, em 1926. Ao examinar documentos deixados pelo irmão de seu avô, recentemente falecido em circunstâncias misteriosas, Francis Thurston descobre a existência de um culto que adora horrores antigos e indizíveis, como assassinatos misteriosos, rituais de sangue nas profundezas dos pântanos da Louisiana, artistas que caem na loucura após visões de pesadelo e uma cidade ciclópica que surge do mar. Conforme Thurston se aprofunda no material encontrado, percebe que a pesquisa de seu tio-avô chegou muito perto da verdade: nas trevas, existem aqueles que querem acordar o deus adormecido Cthulhu para espalhar a loucura e a destruição por todo o mundo. E ninguém melhor que Baranger para traduzir em imagens toda a grandeza desse apocalipse lovecraftiano. Como afirma o artista John Howe no prefácio da obra, as ilustrações de François Baranger trazem “um foco afiado, alargando o escopo, forçando as fronteiras do imaginável, evocando o horror impronunciável do grandioso despertar de Cthulhu. Sua arte possui uma sobriedade elegante; estas são visões sombriamente evocativas e espetaculares de beleza lúgubre e gigantesca”. O próprio Baranger concorda com o comentário de Howe: “A opinião generalizada de que Lovecraft é um escritor de sugestões, do indizível é, a meu ver, limitada. Mesmo que esse aspecto esteja muito presente em suas obras (coisas escondidas nas sombras, que não podem ser descritas pois enlouquecem quem as vê), há outra parte de seu estilo que eu qualificaria de ‘épica’. Criaturas gigantescas, ciclópicas e cidades perdidas de proporções bíblicas permeiam seus contos, com descrições detalhadas. Com ‘O Chamado de Cthulhu’, não é diferente. Quantas vezes, ao lê-lo, sonhei em ver essas imagens literárias traduzidas visualmente, principalmente na tela grande?” Agora todos nós podemos apreciar e se deleitar com a imaginação de Lovecraft e os sonhos de Baranger transformados nessa bela obra de arte em formato de livro.',
+  category: 'Terror'
+);
+
+ItemModel aHoraLobisomen = ItemModel(
+  itemName: 'A hora do lobisomem'
+  imgUrl: 'assets/livros/Lobisomen.jpg',
+  price: 29.57,
+  unit: 'und',
+  condition: 'Usado',
+  description: 'O primeiro grito veio de um trabalhador da ferrovia isolado pela neve, enquanto as presas do monstro dilaceravam sua garganta. No mês seguinte, um grito de êxtase e agonia vem de uma mulher atacada no próprio quarto. Agora, a cada vez que a lua cheia brilha sobre a cidade de Tarker’s Mill, surgem novas cenas de terror inimaginável. Quem será o próximo? Quando a lua cresce no céu, um terror paralisante toma os moradores da cidade. Uivos quase humanos ecoam no vento. E por todo lado as pegadas de um monstro cuja fome nunca é saciada. Um clássico de Stephen King, com as ilustrações originais de Bernie Wrightson',
+  category: 'Terror'
+);
+
+ItemModel oBebeDeRose = ItemModel(
+  itemName: 'O Bebê de Rosemary'
+  imgUrl: 'assets/livros/oBebe.jpg',
+  price: 50.00,
+  unit: 'und',
+  condition: 'Novo',
+  description: 'Rosemary Woodhouse parece ter, finalmente, realizado todos os seus sonhos. Casada com um jovem ator por quem é apaixonada, logo muda-se para um apartamento aristocrático no imponente e prestigiado edifício Bramford. O prédio, célebre pela arquitetura vitoriana e pelos residentes famosos, é um cenário idílico para emoldurar o nascimento de uma grande paixão. Um início perfeito para uma jovem romântica, que planeja se dedicar à família e às alegrias do lar. Poucos meses após a mudança, Rosemary é agraciada pela semente divina da vida. A felicidade transborda de seu corpo e o fruto de seu ventre é aguardado com entusiasmo pelo marido e pelos novos vizinhos. No entanto, o sol brilha por pouco tempo, e o universo melancólico e assustador vai ganhando forma e sufocando, pouco a pouco, a jovem mãe, o bebê e os leitores.',
+  category: 'Terror'
+);
+
+//Ficção Cientifica
 
 List<ItemModel> items = [
   //Romance
@@ -245,6 +325,19 @@ List<ItemModel> items = [
   oLadrao,
   aBiblioteca
   //Terror
+  oCemiterio,
+  oVilarejo,
+  oExorcista,
+  carrieEstranha,
+  oIluminado,
+  oChamadoCthulhu,
+  aHoraLobisomen,
+  oBebeDeRose,
+  //Suspense
+
+  //Biografia
+
+  //FicçãoCientifica
 ];
 
 List<String> categories = [
