@@ -224,7 +224,7 @@ ItemModel  aBiblioteca = ItemModel(
 //Terror
 
 ItemModel oCemiterio = ItemModel(
-  itemName: 'O cemitério'
+  itemName: 'O cemitério',
   imgUrl: 'assets/livros/oCemiterio.jpg',
   price: 16.90,
   unit: 'und',
@@ -234,7 +234,7 @@ ItemModel oCemiterio = ItemModel(
 );
 
 ItemModel oVilarejo = ItemModel(
-  itemName: 'O cemitério'
+  itemName: 'O cemitério',
   imgUrl: 'assets/livros/oVilarejo.jpg',
   price: 23.90,
   unit: 'und',
@@ -244,7 +244,7 @@ ItemModel oVilarejo = ItemModel(
 );
 
 ItemModel oExorcista = ItemModel(
-  itemName: 'O Exorcista'
+  itemName: 'O Exorcista',
   imgUrl: 'assets/livros/oExorcista.jpg',
   price: 49.90,
   unit: 'und',
@@ -254,7 +254,7 @@ ItemModel oExorcista = ItemModel(
 );
 
 ItemModel carrieEstranha = ItemModel(
-  itemName: 'Carrie, a estranha '
+  itemName: 'Carrie, a estranha',
   imgUrl: 'assets/livros/carrieEstranha.jpg',
   price: 19.90,
   unit: 'und',
@@ -264,7 +264,7 @@ ItemModel carrieEstranha = ItemModel(
 );
 
 ItemModel oIluminado = ItemModel(
-  itemName: 'O iluminado: 1'
+  itemName: 'O iluminado: 1',
   imgUrl: 'assets/livros/oIluminado.jpg',
   price: 15.57,
   unit: 'und',
@@ -274,7 +274,7 @@ ItemModel oIluminado = ItemModel(
 );
 
 ItemModel oChamadoCthulhu = ItemModel(
-  itemName: 'O Chamado de Cthulhu'
+  itemName: 'O Chamado de Cthulhu',
   imgUrl: 'assets/livros/oCthulhu.jpg',
   price: 39.57,
   unit: 'und',
@@ -284,7 +284,7 @@ ItemModel oChamadoCthulhu = ItemModel(
 );
 
 ItemModel aHoraLobisomen = ItemModel(
-  itemName: 'A hora do lobisomem'
+  itemName: 'A hora do lobisomem',
   imgUrl: 'assets/livros/Lobisomen.jpg',
   price: 29.57,
   unit: 'und',
@@ -294,7 +294,7 @@ ItemModel aHoraLobisomen = ItemModel(
 );
 
 ItemModel oBebeDeRose = ItemModel(
-  itemName: 'O Bebê de Rosemary'
+  itemName: 'O Bebê de Rosemary',
   imgUrl: 'assets/livros/oBebe.jpg',
   price: 50.00,
   unit: 'und',
@@ -329,7 +329,7 @@ ItemModel nadaMaisComo = ItemModel(
   imgUrl: 'assets/livros/nadaMais.jpg',
   price: 35.89,
   unit: 'und',
-  condition: 'Novo'
+  condition: 'Novo',
   description: 'Em um mundo que já começa a colapsar pela falta de cuidado com o meio ambiente, uma catástrofe sem precedentes na história moderna se aproxima, trazendo consigo o poder de destruir toda a civilização eletrônico-digital. Momentos antes do impacto, um matemático e uma neurocientista, tio e sobrinha, tentam lidar ao mesmo tempo com seus dilemas pessoais e o possível colapso do planeta. Em paralelo, uma enorme conspiração mundial, com seus próprios interesses e ambições, está disposta a controlar as mentes e os destinos da humanidade',
   category: 'Ficção Científica',
 );
@@ -456,7 +456,7 @@ ItemModel stanLee = ItemModel(
   category: 'Biografia',
 );
 
-ItemModel barackOba = ItemMode(
+ItemModel barackOba = ItemModel(
   itemName: 'Uma terra prometida',
   imgUrl: 'assets/livros/barack.jpg',
   price: 10.90,
@@ -467,7 +467,7 @@ ItemModel barackOba = ItemMode(
 
   //Suspense
 
-temModel oHomemGiz = ItemMode(
+ItemModel oHomemGiz = ItemModel(
   itemName: 'Uma terra prometida',
   imgUrl: 'assets/livros/homemGiz.jpg',
   price: 17.90,
@@ -477,7 +477,7 @@ temModel oHomemGiz = ItemMode(
   category: 'Suspense',
   );
 
-temModel outsider = ItemMode(
+ItemModel outsider = ItemModel(
   itemName: 'Outsider ',
   imgUrl: 'assets/livros/outsider.jpg',
   price: 26.90,
@@ -487,7 +487,7 @@ temModel outsider = ItemMode(
   category: 'Suspense',
   );
 
-temModel garotaExem = ItemMode(
+ItemModel garotaExem = ItemModel(
   itemName: 'Garota exemplar ',
   imgUrl: 'assets/livros/garotaExem.jpg',
   price: 20.90,
@@ -565,24 +565,16 @@ List<String> categories = [
   'Quadrinhos'
 ];
 
-List<CartItemModel> cartItems = [
-  CartItemModel(item: hipotese, quantity: 1),
-  CartItemModel(item: melhorFilme, quantity: 1),
-  CartItemModel(item: amorGelo, quantity: 1),
-];
+List<CartItemModel> cartItems = [];
 
 List<OrderModel> orders = [
   OrderModel(
     id: 'aabb564djjks',
     createdDateTime: DateTime.parse('2024-11-20 10:00:10.458'),
     overdueDateTime: DateTime.parse('2024-11-15 11:00:10.4580'),
-    items: [
-      CartItemModel(item: hipotese, quantity: 1),
-      CartItemModel(item: melhorFilme, quantity: 1),
-      CartItemModel(item: amorGelo, quantity: 1),
-    ],
+    items: [],
     status: 'pending_payment',
     copyAndPaste: 'jdksjhfskjfh87384edsda',
-    total: 0, // Esse total deve ser calculado corretamente com base nos itens do pedido
+    total: 0, // O total será calculado quando o pedido for criado
   )
 ];

@@ -14,15 +14,32 @@ class HomeTab extends StatefulWidget {
 
 class _HomeTabState extends State<HomeTab> {
   String selectedCategory = 'Romance';
+  String searchQuery = '';
 
   // ValueNotifier to keep track of cart item count
   final ValueNotifier<int> _cartItemCount = ValueNotifier<int>(0);
+
+  // TextEditingController for search field
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
     // Initialize the cart item count
     _updateCartItemCount();
+
+    // Listener to update search query
+    _searchController.addListener(() {
+      setState(() {
+        searchQuery = _searchController.text;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
   }
 
   void _updateCartItemCount() {
@@ -38,10 +55,19 @@ class _HomeTabState extends State<HomeTab> {
   }
 
   List<ItemModel> getFilteredItems() {
-    if (selectedCategory == 'Todos') {
-      return appData.items;
+    List<ItemModel> filteredItems = appData.items;
+
+    // Filter by category
+    if (selectedCategory != 'Todos') {
+      filteredItems = filteredItems.where((item) => item.category == selectedCategory).toList();
     }
-    return appData.items.where((item) => item.category == selectedCategory).toList();
+
+    // Filter by search query
+    if (searchQuery.isNotEmpty) {
+      filteredItems = filteredItems.where((item) => item.itemName.toLowerCase().contains(searchQuery.toLowerCase())).toList();
+    }
+
+    return filteredItems;
   }
 
   @override
@@ -120,6 +146,7 @@ class _HomeTabState extends State<HomeTab> {
               vertical: 10,
             ),
             child: TextFormField(
+              controller: _searchController,
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Color(0xFFABC5C5),

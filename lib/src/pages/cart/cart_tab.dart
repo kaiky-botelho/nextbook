@@ -15,22 +15,10 @@ class CartTab extends StatefulWidget {
 class _CartTabState extends State<CartTab> {
   final UtilsServices utilsServices = UtilsServices();
 
-  void removeItemFromCart(CartItemModel cartItem) {
-    setState(() {
-      appData.cartItems.remove(cartItem);
-    });
-  }
-
-  double cartTotalPrice() {
-    double total = 0;
-    for (var item in appData.cartItems) {
-      total += item.totalPrice();
-    }
-    return total;
-  }
-
   @override
   Widget build(BuildContext context) {
+    final hasItems = appData.cartItems.isNotEmpty;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 178, 203, 207),
@@ -45,77 +33,103 @@ class _CartTabState extends State<CartTab> {
       body: Column(
         children: [
           Expanded(
-            child: ListView.builder(
-              itemCount: appData.cartItems.length,
-              itemBuilder: (_, index) {
-                return CartTile(
-                  cartItem: appData.cartItems[index],
-                  remove: removeItemFromCart,
-                );
-              },
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(30),
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 3,
-                  spreadRadius: 2,
-                ),
-              ],
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const Text(
-                  'Total Geral',
-                  style: TextStyle(
-                    fontSize: 12,
-                  ),
-                ),
-                Text(
-                  utilsServices.princeToCurrency(cartTotalPrice()),
-                  style: TextStyle(
-                    fontSize: 23,
-                    color: CustomColors.vermelhoNext,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(
-                  height: 50,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: CustomColors.vermelhoNext,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                    onPressed: () async {
-                      bool? result = await showOrderConfirmation();
-
-                      print(result);
+            child: hasItems
+                ? ListView.builder(
+                    itemCount: appData.cartItems.length,
+                    itemBuilder: (_, index) {
+                      return CartTile(
+                        cartItem: appData.cartItems[index],
+                        remove: (item) {
+                          setState(() {
+                            appData.cartItems.remove(item);
+                          });
+                        },
+                      );
                     },
-                    child: const Text(
-                      'Concluir Pedido',
+                  )
+                : Center(
+                    child: Text(
+                      'Seu carrinho está vazio.',
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.white,
+                        color: Colors.grey[600],
                       ),
                     ),
                   ),
-                )
-              ],
-            ),
           ),
+          if (hasItems)
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(30),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 3,
+                    spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const Text(
+                    'Total Geral',
+                    style: TextStyle(
+                      fontSize: 12,
+                    ),
+                  ),
+                  Text(
+                    utilsServices.princeToCurrency(cartTotalPrice()),
+                    style: TextStyle(
+                      fontSize: 23,
+                      color: CustomColors.vermelhoNext,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 50,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: CustomColors.vermelhoNext,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                      ),
+                      onPressed: () async {
+                        bool? result = await showOrderConfirmation();
+
+                        if (result == true) {
+                          // Proceed with order submission
+                          // Add your order submission logic here
+                        }
+                      },
+                      child: const Text(
+                        'Concluir Pedido',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
         ],
       ),
     );
+  }
+
+  double cartTotalPrice() {
+    double total = 0;
+    for (var item in appData.cartItems) {
+      total += item.totalPrice();
+    }
+    return total;
   }
 
   Future<bool?> showOrderConfirmation() {
@@ -137,12 +151,12 @@ class _CartTabState extends State<CartTab> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
               onPressed: () {
-              Navigator.of(context).pop(true);
+                Navigator.of(context).pop(true);
               },
               child: const Text('Sim'),
             ),
