@@ -6,7 +6,7 @@ import 'package:nextbook/src/models/order_model.dart';
 
 ItemModel hipotese = ItemModel(
   itemName: 'A hipótese do amor',
-  imgUrl: 'assets/livros/A_Hipotese.jpg',
+  imgUrl: 'assets/livros/romance/A_Hipotese.jpg',
   price: 34.90,
   unit: 'und',
   condition: 'Novo',
@@ -16,7 +16,7 @@ ItemModel hipotese = ItemModel(
 
 ItemModel melhorFilme = ItemModel(
   itemName: 'Melhor do que nos filmes',
-  imgUrl: 'assets/livros/Melhor_filmes.jpg',
+  imgUrl: 'assets/livros/romance/Melhor_filmes.jpg',
   price: 20.00,
   unit: 'und',
   condition: 'Usado',
@@ -26,7 +26,7 @@ ItemModel melhorFilme = ItemModel(
 
 ItemModel orgulho = ItemModel(
   itemName: 'Orgulho e preconceito',
-  imgUrl: 'assets/livros/Org_prec.jpg',
+  imgUrl: 'assets/livros/romance/Org_prec.jpg',
   price: 40.90,
   unit: 'und',
   condition: 'Novo',
@@ -37,7 +37,7 @@ ItemModel orgulho = ItemModel(
 
 ItemModel farsaEspanha = ItemModel(
   itemName: 'Uma Farsa de amor na Espanha',
-  imgUrl: 'assets/livros/farsa_Espanha.jpg',
+  imgUrl: 'assets/livros/romance/farsa_Espanha.jpg',
   price: 15.90,
   unit: 'und',
   condition: 'Usado',
@@ -48,7 +48,7 @@ ItemModel farsaEspanha = ItemModel(
 
 ItemModel mecanicaAmor = ItemModel(
   itemName: 'A mecânica do amor',
-  imgUrl: 'assets/livros/Mecanica_Love.jpg',
+  imgUrl: 'assets/livros/romance/Mecanica_Love.jpg',
   price: 40.90,
   unit: 'und',
   condition: 'Novo',
@@ -59,7 +59,7 @@ ItemModel mecanicaAmor = ItemModel(
 
 ItemModel leituraVerao = ItemModel(
   itemName: 'Leitura de verão',
-  imgUrl: 'assets/livros/leituraVerao.jpg',
+  imgUrl: 'assets/livros/romance/leituraVerao.jpg',
   price: 20.90,
   unit: 'und',
   condition: 'Usado',
@@ -70,7 +70,7 @@ ItemModel leituraVerao = ItemModel(
 
 ItemModel turneHeart = ItemModel(
   itemName: 'A turnê do coração partido',
-  imgUrl: 'assets/livros/tureneHeart.jpg',
+  imgUrl: 'assets/livros/romance/tureneHeart.jpg',
   price: 38.90,
   unit: 'und',
   condition: 'Novo',
@@ -81,7 +81,7 @@ ItemModel turneHeart = ItemModel(
 
 ItemModel amorGelo = ItemModel(
   itemName: 'Amor & Gelato: 1',
-  imgUrl: 'assets/livros/loveGelato.jpg',
+  imgUrl: 'assets/livros/romance/loveGelato.jpg',
   price: 10.90,
   unit: 'und',
   condition: 'Usado',
@@ -96,7 +96,7 @@ ItemModel quartAsa = ItemModel(
 
   itemName: 'Quarta Asa: 1', 
 
-  imgUrl: 'assets/livros/Quart_Asa.jpg', 
+  imgUrl: 'assets/livros/fantasia/Quart_Asa.jpg', 
 
   price: 30.90, 
 
@@ -113,7 +113,7 @@ ItemModel oHobit = ItemModel(
 
   itemName: 'O Hobit', 
 
-  imgUrl: 'assets/livros/oHobitt.jpg', 
+  imgUrl: 'assets/livros/fantasia/oHobitt.jpg', 
 
   price: 24.90, 
 
@@ -130,7 +130,7 @@ ItemModel aVidaInvi = ItemModel(
 
   itemName: 'A vida invisível de Addie LaRue', 
 
-  imgUrl: 'assets/livros/aVidaInvisivel.jpg', 
+  imgUrl: 'assets/livros/fantasia/aVidaInvisivel.jpg', 
 
   price: 35.90, 
 
@@ -147,7 +147,7 @@ ItemModel oDiario = ItemModel(
 
   itemName: 'O diário perdido de Gravity falls', 
 
-  imgUrl: 'assets/livros/oDiario.jpg', 
+  imgUrl: 'assets/livros/fantasia/oDiario.jpg', 
 
   price: 47.90, 
 
@@ -164,7 +164,7 @@ ItemModel  aMaldicao = ItemModel(
 
   itemName: 'A maldição do verdadeiro amor', 
 
-  imgUrl: 'assets/livros/aMaldicao.jpg', 
+  imgUrl: 'assets/livros/fantasia/aMaldicao.jpg', 
 
   price: 35.90, 
 
@@ -181,7 +181,7 @@ ItemModel  oPrincipe = ItemModel(
 
   itemName: 'O príncipe cruel: 1', 
 
-  imgUrl: 'assets/livros/oPrincipe.jpg', 
+  imgUrl: 'assets/livros/fantasia/oPrincipe.jpg', 
 
   price: 25.90, 
 
@@ -198,7 +198,7 @@ ItemModel  oLadrao = ItemModel(
 
   itemName: 'O ladrão de Raios: 1', 
 
-  imgUrl: 'assets/livros/oLadrao.jpg', 
+  imgUrl: 'assets/livros/fantasia/oLadrao.jpg', 
 
   price: 36.90, 
 
@@ -213,7 +213,7 @@ ItemModel  oLadrao = ItemModel(
 ItemModel  aBiblioteca = ItemModel( 
 
   itemName: 'A Biblioteca da Meia-Noite', 
-  imgUrl: 'assets/livros/aBiblioteca.jpg', 
+  imgUrl: 'assets/livros/fantasia/aBiblioteca.jpg', 
   price: 46.90, 
   unit: 'und', 
   condition: 'Novo', 
@@ -225,7 +225,7 @@ ItemModel  aBiblioteca = ItemModel(
 
 ItemModel oCemiterio = ItemModel(
   itemName: 'O cemitério',
-  imgUrl: 'assets/livros/oCemiterio.jpg',
+  imgUrl: 'assets/livros/terror/oCemiterio.jpg',
   price: 16.90,
   unit: 'und',
   condition: 'Usado',
@@ -235,7 +235,7 @@ ItemModel oCemiterio = ItemModel(
 
 ItemModel oVilarejo = ItemModel(
   itemName: 'O vilarejo',
-  imgUrl: 'assets/livros/oVilarejo.jpg',
+  imgUrl: 'assets/livros/terror/oVilarejo.jpg',
   price: 23.90,
   unit: 'und',
   condition: 'Novo',
@@ -245,7 +245,7 @@ ItemModel oVilarejo = ItemModel(
 
 ItemModel oExorcista = ItemModel(
   itemName: 'O Exorcista',
-  imgUrl: 'assets/livros/oExorcista.jpg',
+  imgUrl: 'assets/livros/terror/oExorcista.jpg',
   price: 49.90,
   unit: 'und',
   condition: 'Novo',
@@ -255,7 +255,7 @@ ItemModel oExorcista = ItemModel(
 
 ItemModel carrieEstranha = ItemModel(
   itemName: 'Carrie, a estranha',
-  imgUrl: 'assets/livros/carrieEstranha.jpg',
+  imgUrl: 'assets/livros/terror/carrieEstranha.jpg',
   price: 19.90,
   unit: 'und',
   condition: 'Usado',
@@ -265,7 +265,7 @@ ItemModel carrieEstranha = ItemModel(
 
 ItemModel oIluminado = ItemModel(
   itemName: 'O iluminado: 1',
-  imgUrl: 'assets/livros/oIluminado.jpg',
+  imgUrl: 'assets/livros/terror/oIluminado.jpg',
   price: 15.57,
   unit: 'und',
   condition: 'Usado',
@@ -275,7 +275,7 @@ ItemModel oIluminado = ItemModel(
 
 ItemModel oChamadoCthulhu = ItemModel(
   itemName: 'O Chamado de Cthulhu',
-  imgUrl: 'assets/livros/oCthulhu.jpg',
+  imgUrl: 'assets/livros/terror/oCthulhu.jpg',
   price: 39.57,
   unit: 'und',
   condition: 'Novo',
@@ -285,7 +285,7 @@ ItemModel oChamadoCthulhu = ItemModel(
 
 ItemModel aHoraLobisomen = ItemModel(
   itemName: 'A hora do lobisomem',
-  imgUrl: 'assets/livros/Lobisomen.jpg',
+  imgUrl: 'assets/livros/terror/Lobisomen.jpg',
   price: 29.57,
   unit: 'und',
   condition: 'Usado',
@@ -295,7 +295,7 @@ ItemModel aHoraLobisomen = ItemModel(
 
 ItemModel oBebeDeRose = ItemModel(
   itemName: 'O Bebê de Rosemary',
-  imgUrl: 'assets/livros/oBebe.jpg',
+  imgUrl: 'assets/livros/terror/oBebe.jpg',
   price: 50.00,
   unit: 'und',
   condition: 'Novo',
@@ -307,7 +307,7 @@ ItemModel oBebeDeRose = ItemModel(
 
 ItemModel comoParar = ItemModel(
   itemName: 'Como Parar o Tempo',
-  imgUrl: 'assets/livros/comoParar.jpg',
+  imgUrl: 'assets/livros/fcientifica/comoParar.jpg',
   price: 20.00,
   unit: 'und',
   condition: 'Usado',
@@ -317,7 +317,7 @@ ItemModel comoParar = ItemModel(
 
 ItemModel floresParaAlge = ItemModel(
   itemName: 'Flores Para Algernon',
-  imgUrl: 'assets/livros/FloresAlge.jpg',
+  imgUrl: 'assets/livros/fcientifica/FloresAlge.jpg',
   price: 15.30,
   unit: 'und',
   condition: 'Usado',
@@ -326,7 +326,7 @@ ItemModel floresParaAlge = ItemModel(
 
 ItemModel nadaMaisComo = ItemModel(
   itemName: 'Nada mais será como antes',
-  imgUrl: 'assets/livros/nadaMais.jpg',
+  imgUrl: 'assets/livros/fcientifica/nadaMais.jpg',
   price: 35.89,
   unit: 'und',
   condition: 'Novo',
@@ -336,7 +336,7 @@ ItemModel nadaMaisComo = ItemModel(
 
 ItemModel oProblemaTres = ItemModel(
   itemName: 'O problema dos três corpos: 1',
-  imgUrl: 'assets/livros/oProblema.jpg',
+  imgUrl: 'assets/livros/fcientifica/oProblema.jpg',
   price: 19.65,
   unit: 'und',
   condition: 'Usado',
@@ -346,7 +346,7 @@ ItemModel oProblemaTres = ItemModel(
 
 ItemModel aRevoltadeAtlas = ItemModel(
   itemName: 'A revolta de Atlas',
-  imgUrl: 'assets/livros/Atlas.jpg',
+  imgUrl: 'assets/livros/fcientifica/Atlas.jpg',
   price: 25.54,
   unit: 'und',
   condition:'Novo',
@@ -356,7 +356,7 @@ ItemModel aRevoltadeAtlas = ItemModel(
 
 ItemModel aGuerradaPapoula = ItemModel(
   itemName: 'A guerra da papoula vol.1',
-  imgUrl: 'assets/livros/aGuerra.jpg',
+  imgUrl: 'assets/livros/fcientifica/aGuerra.jpg',
   price: 34.75,
   unit: 'und',
   condition: 'Usado',
@@ -366,7 +366,7 @@ ItemModel aGuerradaPapoula = ItemModel(
 
 ItemModel oFiDaMorte = ItemModel(
   itemName: 'O fim da morte: 3',
-  imgUrl: 'assets/livros/oFim.jpg',
+  imgUrl: 'assets/livros/fcientifica/oFim.jpg',
   price: 25.39,
   unit: 'und',
   condition: 'Novo',
@@ -376,7 +376,7 @@ ItemModel oFiDaMorte = ItemModel(
 
 ItemModel jogadorNu1 = ItemModel(
   itemName: 'Jogador Número 1',
-  imgUrl: 'assets/livros/jogador.jpg',
+  imgUrl: 'assets/livros/fcientifica/jogador.jpg',
   price: 32.65,
   unit: 'und',
   condition: 'Novo',
@@ -386,7 +386,7 @@ ItemModel jogadorNu1 = ItemModel(
 
 ItemModel armada = ItemModel(
   itemName: 'Armada',
-  imgUrl: 'assets/livros/armada.jpg',
+  imgUrl: 'assets/livros/fcientifica/armada.jpg',
   price: 12.60,
   unit:'und',
   condition: 'Usado',
@@ -398,7 +398,7 @@ ItemModel armada = ItemModel(
 
 ItemModel tayHistoria = ItemModel(
   itemName: 'Tay - A História de Taylor Swift',
-  imgUrl: 'assets/livros/tay.jpg',
+  imgUrl: 'assets/livros/biografia/tay.jpg',
   price: 19.89,
   unit:'und',
   condition: 'Usado',
@@ -408,7 +408,7 @@ ItemModel tayHistoria = ItemModel(
 
 ItemModel tayHistoriaCompleta = ItemModel(
   itemName: 'Taylor Swift: A história completa',
-  imgUrl: 'assets/livros/aHistoriaCompleta.jpg',
+  imgUrl: 'assets/livros/biografia/aHistoriaCompleta.jpg',
   price: 45.90,
   unit:'und',
   condition: 'Novo',
@@ -418,7 +418,7 @@ ItemModel tayHistoriaCompleta = ItemModel(
 
 ItemModel silvioSantos = ItemModel(
   itemName: 'Silvio Santos: A biografia',
-  imgUrl: 'assets/livros/Silvio.jpg',
+  imgUrl: 'assets/livros/biografia/Silvio.jpg',
   price: 23.90,
   unit:'und',
   condition: 'Usado',
@@ -428,7 +428,7 @@ ItemModel silvioSantos = ItemModel(
 
 ItemModel emBusca = ItemModel(
   itemName: 'Em busca de mim',
-  imgUrl: 'assets/livros/emBusca.jpg',
+  imgUrl: 'assets/livros/biografia/emBusca.jpg',
   price: 34.90,
   unit:'und',
   condition: 'Usado',
@@ -438,7 +438,7 @@ ItemModel emBusca = ItemModel(
 
 ItemModel alexandreeCesar = ItemModel(
   itemName: 'Alexandre e César: As vidas comparadas dos maiores guerreiros da Antiguidade',
-  imgUrl: 'assets/livros/alexandreEcesar.jpg',
+  imgUrl: 'assets/livros/biografia/alexandreEcesar.jpg',
   price: 12.90,
   unit:'und',
   condition: 'Usado',
@@ -448,7 +448,7 @@ ItemModel alexandreeCesar = ItemModel(
 
 ItemModel stanLee = ItemModel(
   itemName: 'Invencível: A ascensão e a queda de Stan Lee',
-  imgUrl: 'assets/livros/stanLee.jpg',
+  imgUrl: 'assets/livros/biografia/stanLee.jpg',
   price: 22.90,
   unit:'und',
   condition: 'Usado',
@@ -458,7 +458,7 @@ ItemModel stanLee = ItemModel(
 
 ItemModel barackOba = ItemModel(
   itemName: 'Uma terra prometida',
-  imgUrl: 'assets/livros/barack.jpg',
+  imgUrl: 'assets/livros/biografia/barack.jpg',
   price: 10.90,
   unit:'und',
   condition: 'Usado',
@@ -469,7 +469,7 @@ ItemModel barackOba = ItemModel(
 
 ItemModel oHomemGiz = ItemModel(
   itemName: 'Uma terra prometida',
-  imgUrl: 'assets/livros/homemGiz.jpg',
+  imgUrl: 'assets/livros/suspense/homemGiz.jpg',
   price: 17.90,
   unit:'und',
   condition: 'Usado',
@@ -479,7 +479,7 @@ ItemModel oHomemGiz = ItemModel(
 
 ItemModel outsider = ItemModel(
   itemName: 'Outsider ',
-  imgUrl: 'assets/livros/outsider.jpg',
+  imgUrl: 'assets/livros/suspense/outsider.jpg',
   price: 26.90,
   unit:'und',
   condition: 'Usado',
@@ -489,7 +489,7 @@ ItemModel outsider = ItemModel(
 
 ItemModel garotaExem = ItemModel(
   itemName: 'Garota exemplar ',
-  imgUrl: 'assets/livros/garotaExem.jpg',
+  imgUrl: 'assets/livros/suspense/garotaExem.jpg',
   price: 20.90,
   unit:'und',
   condition: 'Usado',
@@ -502,7 +502,7 @@ ItemModel garotaExem = ItemModel(
 
 ItemModel jovensVingadores = ItemModel(
   itemName: 'Jovens Vingadores: Assuntos de Família',
-  imgUrl: 'assets/livros/jovens.jpg',
+  imgUrl: 'assets/livros/quadrinhos/jovens.jpg',
   price: 30.90,
   unit:'und',
   condition: 'Usado',
@@ -512,7 +512,7 @@ ItemModel jovensVingadores = ItemModel(
 
 ItemModel guerraSecretas = ItemModel(
   itemName: 'Guerras Secretas',
-  imgUrl: 'assets/livros/secretWars.jpg',
+  imgUrl: 'assets/livros/quadrinhos/secretWars.jpg',
   price: 45.90,
   unit:'und',
   condition: 'Novo',
@@ -522,7 +522,7 @@ ItemModel guerraSecretas = ItemModel(
 
 ItemModel novosVingIlu = ItemModel(
   itemName: 'Guerras Secretas',
-  imgUrl: 'assets/livros/novosVinga.jpg',
+  imgUrl: 'assets/livros/quadrinhos/novosVinga.jpg',
   price: 68.90,
   unit:'und',
   condition: 'Novo',
@@ -532,7 +532,7 @@ ItemModel novosVingIlu = ItemModel(
 
 ItemModel capitaoAmerticaNew = ItemModel(
   itemName: 'Capitão América: O Novo Capitão América',
-  imgUrl: 'assets/livros/oNovoCap.jpg',
+  imgUrl: 'assets/livros/quadrinhos/oNovoCap.jpg',
   price: 29.90,
   unit:'und',
   condition: 'Novo',
@@ -542,7 +542,7 @@ ItemModel capitaoAmerticaNew = ItemModel(
 
 ItemModel homemFerroSuperior = ItemModel(
   itemName: 'Homem de Ferro Superior',
-  imgUrl: 'assets/livros/superior.jpg',
+  imgUrl: 'assets/livros/quadrinhos/superior.jpg',
   price: 35.90,
   unit:'und',
   condition: 'Novo',
@@ -552,7 +552,7 @@ ItemModel homemFerroSuperior = ItemModel(
 
 ItemModel missMarvelFam = ItemModel(
   itemName: 'Miss Marvel: Superfamosa',
-  imgUrl: 'assets/livros/missMarv.jpg',
+  imgUrl: 'assets/livros/quadrinhos/missMarv.jpg',
   price: 16.90,
   unit:'und',
   condition: 'Usado',
@@ -562,7 +562,7 @@ ItemModel missMarvelFam = ItemModel(
 
 ItemModel aAscensaoThano = ItemModel(
   itemName: 'A Ascensão de Thanos',
-  imgUrl: 'assets/livros/thanos.jpg',
+  imgUrl: 'assets/livros/quadrinhos/thanos.jpg',
   price: 12.90,
   unit:'und',
   condition: 'Usado',
@@ -572,7 +572,7 @@ ItemModel aAscensaoThano = ItemModel(
 
 ItemModel quartFantas = ItemModel(
   itemName: 'Quarteto Fantástico: Consertar Tudo',
-  imgUrl: 'assets/livros/quarteto.jpg',
+  imgUrl: 'assets/livros/quadrinhos/quarteto.jpg',
   price: 22.90,
   unit:'und',
   condition: 'Usado',
