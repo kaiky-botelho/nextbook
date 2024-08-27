@@ -234,7 +234,7 @@ ItemModel oCemiterio = ItemModel(
 );
 
 ItemModel oVilarejo = ItemModel(
-  itemName: 'O cemitério',
+  itemName: 'O vilarejo',
   imgUrl: 'assets/livros/oVilarejo.jpg',
   price: 23.90,
   unit: 'und',
@@ -498,6 +498,87 @@ ItemModel garotaExem = ItemModel(
   );
 
 
+//Quadrinhos
+
+ItemModel jovensVingadores = ItemModel(
+  itemName: 'Jovens Vingadores: Assuntos de Família',
+  imgUrl: 'assets/livros/jovens.jpg',
+  price: 30.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Um novo grupo misterioso de jovens heróis aparece na sequência de Vingadores: A Queda. Mas quem são eles? De onde vieram? E que direito eles têm de se chamarem de Jovens Vingadores? Em Assuntos de Família, os recém-formados Jovens Vingadores se preparam para fazer sua estreia pública - mas primeiro eles têm que enfrentar uma ameaça mais poderosa que Kang, o Conquistador, mais perigoso que Mr. Hyde e mais astuto que os Mestres do Terror: seus pais!''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel guerraSecretas = ItemModel(
+  itemName: 'Guerras Secretas',
+  imgUrl: 'assets/livros/secretWars.jpg',
+  price: 45.90,
+  unit:'und',
+  condition: 'Novo',
+  description: '''Os maiores heróis e vilões do Universo Marvel são transportados até um mundo estranho criado por uma entidade de poder inconcebível conhecida como Beyonder para se digladiarem em combates letais. Ao vencedor, será concedido tudo aquilo que desejar. Acompanhe o Capitão América, X-Men, Vingadores, Quarteto Fantástico, Homem-Aranha e Hulk lutando contra Doutor Destino, Doutor Octopus, Lagarto, Galactus, Gangue da Demolição e muitos outros supervilões em confrontos memoráveis! E testemunhe também mudanças que assolaram o Universo Marvel por muitos anos, como o uniforme negro do Homem-Aranha e o surgimento da nova Mulher-Aranha. Tudo isso e muito mais!''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel novosVingIlu = ItemModel(
+  itemName: 'Guerras Secretas',
+  imgUrl: 'assets/livros/novosVinga.jpg',
+  price: 68.90,
+  unit:'und',
+  condition: 'Novo',
+  description: '''Quando a Terra enfrenta suas maiores ameaças, um grupo composto pelos seres mais poderosos do planeta se reúne. Homem de Ferro, Professor X, Raio Negro, Namor, Doutor Estranho e o Senhor Fantástico são os responsáveis por encarar desafios grandes demais para qualquer outro herói. Acompanhe-os em suas jornadas e descubra segredos que mudarão para sempre o modo como eles (e você!) encaram o Universo Marvel! Após anos dedicados à proteção do planeta, eles se encontram em seu momento de maior perigo, na linha de frente de uma invasão skrull. Conseguirão os Illuminati resistir a esse momento de tensão global? Uma edição importantíssima que tem ligação direta e essencial com o famoso e cultuado evento Invasão Secreta!''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel capitaoAmerticaNew = ItemModel(
+  itemName: 'Capitão América: O Novo Capitão América',
+  imgUrl: 'assets/livros/oNovoCap.jpg',
+  price: 29.90,
+  unit:'und',
+  condition: 'Novo',
+  description: '''Quando Steve Rogers se recusa a se tornar um agente do governo estadunidense, ele é privado de seu uniforme, título e escudo. e assim nasce um novo Capitão América! Cabe agora a John Walker (o antigo Superpatriota) a tarefa de ser um ícone da justiça. Mas será que, mesmo com a ajuda de um ajudante nos moldes do antigo Bucky, ele estará à altura do cargo? Um clássico absoluto da década de 1980 de volta ao Brasil!''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel homemFerroSuperior = ItemModel(
+  itemName: 'Homem de Ferro Superior',
+  imgUrl: 'assets/livros/superior.jpg',
+  price: 35.90,
+  unit:'und',
+  condition: 'Novo',
+  description: '''Quanto você pagaria pela perfeição? Beleza? Imortalidade? Tony Stark sabe, e ele está pronto para dar a você - mas a um preço terrível! O efeito AXIS mudou Tony: ele está mais estiloso, confiante e astuto do que nunca. E está pronto para conduzir São Francisco ao futuro - mas o primeiro passo é lançar o Extremis por toda a cidade! Até onde Tony irá para manter o segredo de seu sucesso em segredo? À medida que as ações de Tony se tornam mais questionáveis, quem conspirará para derrubá-lo?''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel missMarvelFam = ItemModel(
+  itemName: 'Miss Marvel: Superfamosa',
+  imgUrl: 'assets/livros/missMarv.jpg',
+  price: 16.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Quanto você pagaria pela perfeição? Beleza? Imortalidade? Tony Stark sabe, e ele está pronto para dar a você - mas a um preço terrível! O efeito AXIS mudou Tony: ele está mais estiloso, confiante e astuto do que nunca. E está pronto para conduzir São Francisco ao futuro - mas o primeiro passo é lançar o Extremis por toda a cidade! Até onde Tony irá para manter o segredo de seu sucesso em segredo? À medida que as ações de Tony se tornam mais questionáveis, quem conspirará para derrubá-lo?''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel aAscensaoThano = ItemModel(
+  itemName: 'A Ascensão de Thanos',
+  imgUrl: 'assets/livros/thanos.jpg',
+  price: 12.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Neste conto de tragédia, destino e manipulação, Thanos, o flagelo do cosmo, se revela um conquistador incomparável. De onde veio este semideus da morte e da destruição? E, mais importante: o que ele quer? Descubra como uma jornada de amor verdadeiro pode gerar um rio de sangue capaz de alterar não apenas a vida de um garoto, mas também a galáxia e a natureza do próprio Universo Marvel!''',
+  category: 'Quadrinhos',
+  );
+
+ItemModel quartFantas = ItemModel(
+  itemName: 'Quarteto Fantástico: Consertar Tudo',
+  imgUrl: 'assets/livros/quarteto.jpg',
+  price: 22.90,
+  unit:'und',
+  condition: 'Usado',
+  description: '''Um clássico moderno está de volta! Dentro de uma sala mantida em segredo até mesmo de seus familiares, Reed Richards rabiscou nas paredes cem das maiores e mais ousadas ideias que seu cérebro poderia produzir. E ele acaba de acrescentou uma 101º, a mais audaciosa de todas: "Consertar Tudo." Porém, o grande cérebro do Quarteto Fantástico descobrirá que resolver tudo demanda um grande custo. Talvez alto demais!''',
+  category: 'Quadrinhos',
+  );
 
 List<ItemModel> items = [
   //Romance
@@ -509,6 +590,7 @@ List<ItemModel> items = [
   leituraVerao,
   turneHeart,
   amorGelo,
+
   //Fantasia
   quartAsa,
   oHobit,
@@ -518,6 +600,7 @@ List<ItemModel> items = [
   oPrincipe,
   oLadrao,
   aBiblioteca,
+
   //Terror
   oCemiterio,
   oVilarejo,
@@ -527,10 +610,12 @@ List<ItemModel> items = [
   oChamadoCthulhu,
   aHoraLobisomen,
   oBebeDeRose,
+
   //Suspense
   oHomemGiz,
   outsider,
   garotaExem,
+
   //Biografia
   tayHistoria,
   tayHistoriaCompleta,
@@ -552,7 +637,14 @@ List<ItemModel> items = [
   armada,
 
   //Quadrinhos
-
+  quartFantas,
+  aAscensaoThano,
+  missMarvelFam,
+  homemFerroSuperior,
+  capitaoAmerticaNew,
+  novosVingIlu,
+  guerraSecretas,
+  jovensVingadores,
 ];
 
 List<String> categories = [
@@ -575,6 +667,6 @@ List<OrderModel> orders = [
     items: [],
     status: 'pending_payment',
     copyAndPaste: 'jdksjhfskjfh87384edsda',
-    total: 0, // O total será calculado quando o pedido for criado
+    total: 0, 
   )
 ];
