@@ -1,11 +1,11 @@
 class ItemModel {
-  String itemName;
-  String imgUrl;
-  double price;
-  String unit;
-  String condition;
-  String description;
-  String category; // Novo campo
+  final String itemName;
+  final String imgUrl;
+  final double price;
+  final String unit;
+  final String condition;
+  final String description;
+  final String category;
 
   ItemModel({
     required this.itemName,
@@ -14,6 +14,6 @@ class ItemModel {
     required this.unit,
     required this.condition,
     required this.description,
-    required this.category, // Novo campo
+    required this.category,
   });
 }

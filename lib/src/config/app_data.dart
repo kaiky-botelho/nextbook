@@ -649,14 +649,4 @@ List<String> categories = [
 
 List<CartItemModel> cartItems = [];
 
-List<OrderModel> orders = [
-  OrderModel(
-    id: 'aabb564djjks',
-    createdDateTime: DateTime.parse('2024-11-20 10:00:10.458'),
-    overdueDateTime: DateTime.parse('2024-11-15 11:00:10.4580'),
-    items: [],
-    status: 'pending_payment',
-    copyAndPaste: 'jdksjhfskjfh87384edsda',
-    total: 0,
-  )
-];
+List<OrderModel> orders = [];

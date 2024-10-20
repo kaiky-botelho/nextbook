@@ -1,13 +1,13 @@
-import 'package:nextbook/src/models/cart_item_model.dart';
+import 'cart_item_model.dart';
 
 class OrderModel {
-  String id;
-  DateTime createdDateTime;
-  DateTime overdueDateTime;
-  List<CartItemModel> items;
-  String status;
-  String copyAndPaste;
-  double total;
+  final String id;
+  final DateTime createdDateTime;
+  final DateTime overdueDateTime;
+  final List<CartItemModel> items;
+  final String status;
+  final String copyAndPaste;
+  final double total;
 
   OrderModel({
     required this.id,
@@ -19,3 +19,4 @@ class OrderModel {
     required this.total,
   });
 }
+

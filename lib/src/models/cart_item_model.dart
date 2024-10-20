@@ -1,4 +1,4 @@
-import 'package:nextbook/src/models/item_model.dart';
+import 'item_model.dart';
 
 class CartItemModel {
   final ItemModel item;
