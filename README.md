@@ -23,3 +23,12 @@ Bem-vindo ao repositório do NextBook, um aplicativo de e-commerce desenvolvido 
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seuusuario/NextBook.git
+   
+2. Instale as dependências:
+   ```bash
+   flutter pub get
+
+3. Execute o aplicativo:
+ ```bash
+flutter run
+
